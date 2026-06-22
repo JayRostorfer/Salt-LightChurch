@@ -4,7 +4,7 @@ import Footer from "@/components/layout/Footer"
 
 export const metadata = {
   title: "Salt and Light",
-  description: "The lihght of the world"
+  description: "The light of the world"
 }
 
 export default function RootLayout({ children }) {
