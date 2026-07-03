@@ -40,7 +40,7 @@ export default function HeroSection() {
             xs: 3,
             md: 10
           },
-          maxWidth: "700px"
+         
         }}
       >
         <Typography
@@ -67,7 +67,11 @@ export default function HeroSection() {
           « You are the salt of the earth… You are the light of the world  » — Matthew 5:13-14
         </Typography>
 
-        <Stack direction="row" spacing={2}>
+        <Stack direction="row" spacing={2}
+            sx={{
+              justifyContent: "center",
+              alignItems: "center",
+            }}>
           <Button
             variant="contained"
             sx={{
