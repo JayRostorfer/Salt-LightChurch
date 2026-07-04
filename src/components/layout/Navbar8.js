@@ -288,12 +288,28 @@ const navItemSx = {
 
   <MenuItem
     component={Link}
+    href="/ministries/influence-men"
+    onClick={handleMenuClose}
+  >
+    Influence Men
+  </MenuItem>
+
+  <MenuItem
+    component={Link}
     href="/ministries/young-adults"
     onClick={handleMenuClose}
   >
     Young Adults
   </MenuItem>
 
+  <MenuItem
+    component={Link}
+    href="/ministries/rocksalt"
+    onClick={handleMenuClose}
+  >
+    Rocksalt Youth
+  </MenuItem>
+      
   <MenuItem
     component={Link}
     href="/ministries/kids"
