@@ -544,6 +544,15 @@ const navItemSx = {
                       Aroma Women
                     </Box>
 
+                    <Box
+                      component={Link}
+                      href="/ministries/influence-men"
+                      onClick={() => setOpen(false)}
+                      sx={accordionLinkSx}
+                    >
+                     Influence Men
+                    </Box>
+
                     {/* YOUNG ADULTS */}
                     <Box
                       component={Link}
@@ -552,6 +561,15 @@ const navItemSx = {
                       sx={accordionLinkSx}
                     >
                       Young Adults
+                    </Box>
+
+                    <Box
+                      component={Link}
+                      href="/ministries/rocksalt"
+                      onClick={() => setOpen(false)}
+                      sx={accordionLinkSx}
+                    >
+                      Rocksalt Youth
                     </Box>
 
                     {/* KIDS */}
