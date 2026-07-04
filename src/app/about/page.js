@@ -28,7 +28,7 @@ const AboutUs = () => {
       mx="auto"
       sx= {{ 
         background: "linear-gradient(180deg, #020617 0%, #0f172a 50%, #111827 100%)",
-        paddingTop: 5
+        paddingTop: 20
       }}
     >
       <Typography
@@ -38,6 +38,7 @@ const AboutUs = () => {
         fontWeight="bold"
         color="whitesmoke"
         gutterBottom
+          
        
       >
         What do we believe?
