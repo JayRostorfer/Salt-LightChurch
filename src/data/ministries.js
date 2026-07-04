@@ -115,7 +115,7 @@ const ministries = [
   },
   
   {
-    slug: "men",
+    slug: "influence-men",
     title: "Influence Men",
     subtitle: "influence men subtitle",
     shortDescription:
