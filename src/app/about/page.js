@@ -5,7 +5,10 @@ import { motion, easeOut } from 'framer-motion';
 import aboutData from '@/data/aboutus.json';
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
 
   visible: (i) => ({
     opacity: 1,
@@ -26,9 +29,10 @@ const AboutUs = () => {
       py={6}
       maxWidth="lg"
       mx="auto"
-      sx= {{ 
-        background: "linear-gradient(180deg, #020617 0%, #0f172a 50%, #111827 100%)",
-        paddingTop: 20
+      sx={{
+        background:
+          'linear-gradient(180deg, #020617 0%, #0f172a 50%, #111827 100%)',
+        paddingTop: 5,
       }}
     >
       <Typography
@@ -38,13 +42,15 @@ const AboutUs = () => {
         fontWeight="bold"
         color="whitesmoke"
         gutterBottom
-          
-       
       >
         What do we believe?
       </Typography>
 
-      <Grid container spacing={4} mt={2}>
+      <Grid
+        container
+        spacing={4}
+        mt={2}
+      >
         {aboutData.map((valeur, i) => (
           <Grid
             key={i}
@@ -71,7 +77,10 @@ const AboutUs = () => {
                 }}
               >
                 <Typography
-                  sx={{ whiteSpace: 'pre-line', color: "#c49b63" }}
+                  sx={{
+                    whiteSpace: 'pre-line',
+                    color: '#c49b63',
+                  }}
                   fontWeight="bold"
                   variant="h6"
                   align="center"
@@ -81,10 +90,12 @@ const AboutUs = () => {
                 </Typography>
 
                 <Typography
-                  color="whitesmoke"
                   variant="body1"
                   align="center"
-                  sx={{ whiteSpace: 'pre-line', color: "whitesmoke" }}
+                  sx={{
+                    whiteSpace: 'pre-line',
+                    color: 'whitesmoke',
+                  }}
                 >
                   {valeur.description}
                 </Typography>
