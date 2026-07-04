@@ -7,7 +7,7 @@ export const metadata = {
   title: "Salt and Light",
   description: "The light of the world",
   icons: {
-    icon: "images/salt-logo-4.png",
+    icon: "images/salt-logo-5.png",
   }
 }
 
