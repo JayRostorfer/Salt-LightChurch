@@ -61,7 +61,7 @@ export default function HeroSection() {
           variant="h6"
           sx={{
             fontWeight: "bold",
-            color: "darkblue",
+            color: "#c49b63",
             mb: 3,
           }}
         >
