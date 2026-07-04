@@ -106,7 +106,7 @@ export default function BottomNav() {
       }}
     >
       <Image
-        src="/images/salt-logo-3.png"
+        src="/images/salt-logo-4.png"
         alt="Logo"
         fill
         style={{
