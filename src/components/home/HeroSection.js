@@ -54,7 +54,7 @@ export default function HeroSection() {
             }
           }}
         >
-          Salt & Ligth Church
+          Salt & Light Church
         </Typography>
 
         <Typography
