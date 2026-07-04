@@ -5,10 +5,10 @@ import { useEffect } from "react";
 import HeroSection from "@/components/home/HeroSection"
 import MinistriesPreview from "@/components/home/MinistriesPreview"
 import CTASection from "@/components/home/CTASection"
-import ContactForm5 from "@/components/home/ContactForm5"
 import TeachingsPage from "@/components/home/TeachingsPage";
 import AboutUs from "@/components/home/AboutUs";
 import Founder from "@/components/home/Founder"
+import ContactSection from "@/components/home/ContactSection"
 
 export default function HomePage() {
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function HomePage() {
       <MinistriesPreview />
       <CTASection />
       <AboutUs />
-      <ContactForm5 />
+      <ContactSection />
     
     
       
