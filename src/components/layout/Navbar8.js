@@ -531,8 +531,9 @@ const navItemSx = {
                       px: 2,
 
                       "&:hover": {
-                        backgroundColor: "#1f1f1f"
-                      },
+          backgroundColor: "rgba(255,255,255,0.08)",
+          color: "#c49b63",
+        },
 
                       transition: "all 0.4s ease"
                     }}
