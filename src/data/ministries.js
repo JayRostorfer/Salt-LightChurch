@@ -124,7 +124,7 @@ const ministries = [
     description:
       "Influence Men description",
 
-    heroImage:  "/images/influence-men1.jpg",,
+    heroImage:  "/images/influence-men1.jpg",
 
     experiences: [
   { label: "Prayer", icon: VolunteerActivismIcon },
