@@ -24,11 +24,39 @@ const ministries = [
   { label: "Fellowship", icon: FavoriteIcon }
 ], 
     gallery: [
+      "/images/kids1.jpg",
+      "/images/kids1.jpg",
+     "/images/kids1.jpg",
+    ],
+  },
+
+{
+    slug:"rocksalt",
+    title: "Rocksalt",
+    subtitle: "Safe, Fun & Growing in Faith",
+    shortDescription:
+      "A joyful environment where children learn about God through fun activities and biblical teaching.",
+
+    description:
+      "Blast Kids is a vibrant ministry dedicated to helping children grow spiritually in a safe, joyful, and engaging environment. Through worship, games, bible lessons, and group activities, children develop their faith while building friendships.",
+
+    heroImage: "/images/rocksalt1.jpg",
+
+    experiences: [
+  { label: "Prayer", icon: VolunteerActivismIcon },
+  { label: "Unity", icon: GroupsIcon },
+  { label: "Fellowship", icon: FavoriteIcon }, 
+  { label: "Prayer", icon: VolunteerActivismIcon },
+  { label: "Unity", icon: GroupsIcon },
+  { label: "Fellowship", icon: FavoriteIcon }
+], 
+    gallery: [
       "/images/rocksalt1.jpg",
       "/images/rocksalt2.jpg",
       "/images/rocksalt3.jpg",
     ],
   },
+  
 
   {
     slug: "young-adults",
@@ -85,6 +113,34 @@ const ministries = [
       "/images/aroma2.jpg",
     ],
   },
+  
+  {
+    slug: "men",
+    title: "Influence Men",
+    subtitle: "influence men subtitle",
+    shortDescription:
+      "Influence men short description",
+
+    description:
+      "Influence Men description",
+
+    heroImage:  "/images/influence-men1.jpg",,
+
+    experiences: [
+  { label: "Prayer", icon: VolunteerActivismIcon },
+  { label: "Unity", icon: GroupsIcon },
+  { label: "Fellowship", icon: FavoriteIcon }, 
+  { label: "Prayer", icon: VolunteerActivismIcon },
+  { label: "Unity", icon: GroupsIcon },
+  { label: "Fellowship", icon: FavoriteIcon }
+], 
+    gallery: [
+      "/images/influence-men1.jpg",
+       "/images/influence-men1.jpg",
+       "/images/influence-men1.jpg",
+    ],
+  },
+
 ]
 
 export default ministries
