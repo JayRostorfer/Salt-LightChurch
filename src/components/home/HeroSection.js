@@ -47,7 +47,7 @@ export default function HeroSection() {
           variant="h2"
           sx={{
             fontWeight: "bold",
-            mb: 3,
+            mb: 1,
             fontSize: {
               xs: "3rem",
               md: "5rem"
@@ -55,6 +55,21 @@ export default function HeroSection() {
           }}
         >
           Salt & Light Church
+        </Typography>
+
+            <Typography
+          variant="h6"
+          sx={{
+            fontWeight: "bold",
+            color: "darkblue",
+            mb: 3,
+            fontSize: {
+              xs: "3rem",
+              md: "5rem"
+            }
+          }}
+        >
+          ASSEMBLEE DE DIEU ANGLOPHONE MADAGASCAR
         </Typography>
 
         <Typography
