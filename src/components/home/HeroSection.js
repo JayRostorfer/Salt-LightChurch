@@ -63,10 +63,6 @@ export default function HeroSection() {
             fontWeight: "bold",
             color: "darkblue",
             mb: 3,
-            fontSize: {
-              xs: "3rem",
-              md: "5rem"
-            }
           }}
         >
           ASSEMBLEE DE DIEU ANGLOPHONE MADAGASCAR
