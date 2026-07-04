@@ -13,6 +13,7 @@ export default function Footer() {
         color: "lightgrey",
         padding: "2rem 1rem",
         textAlign: "center",
+		height: "250px",
       }}
     >
       <Typography variant="h6" gutterBottom>
