@@ -32,7 +32,6 @@ export default function HomePage() {
       <Founder />
       <MinistriesPreview />
       <CTASection />
-      <AboutUs />
       <ContactSection />
     
     
