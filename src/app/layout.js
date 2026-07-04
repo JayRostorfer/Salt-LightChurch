@@ -4,7 +4,10 @@ import Footer from "@/components/layout/Footer"
 
 export const metadata = {
   title: "Salt and Light",
-  description: "The light of the world"
+  description: "The light of the world",
+  icons: {
+    icon: "images/salt-logo-4.png",
+  }
 }
 
 export default function RootLayout({ children }) {
