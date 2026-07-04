@@ -187,7 +187,7 @@ const navItemSx = {
               </Link>
               
                <Link
-                href=""
+                href="/about"
                 style={{
                   textDecoration: "none"
                 }}
