@@ -60,8 +60,7 @@ export default function BottomNav() {
         animation: "textdefil 18s linear infinite",
       }}
     >
-      Welcome to Salt & Light Church • Sunday Worship 9:00 AM • Everyone is
-      welcome!
+      Find us on Boulevard de l'Europe Antsalovana 67 Hectare • Sunday 8:30 Growth • 9:30 Prayer • 10:00 Worship Celebration
     </Typography>
   </Box>
 
