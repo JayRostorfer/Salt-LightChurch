@@ -1,6 +1,7 @@
 import "./globals.css"
 import Navbar8 from "@/components/layout/Navbar8"
 import Footer from "@/components/layout/Footer"
+import BottomNav from "@/components/layout/BottomNav"
 
 export const metadata = {
   title: "Salt and Light",
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar8 />
         {children}
+        <BottomNav />
         <Footer />
       </body>
     </html>
