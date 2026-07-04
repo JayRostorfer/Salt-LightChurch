@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 
 
 const ChurchMap = dynamic(
-  () => import("@/components/ChurchMap"),
+  () => import("@/components/home/ChurchMap"),
   {
     ssr: false,
   }
