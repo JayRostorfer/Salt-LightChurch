@@ -34,18 +34,7 @@ export default function Founder() {
               Who we are? 
             </Typography>
 
-
-            <Typography
-              sx={{
-                color: "whitesmoke",
-                lineHeight: 1.9,
-                mb: 2,
-              }}
-            >
-              We are a church family and part of the Assemblies of God. We are passionate about worship, guided by the Holy Spirit, and committed to living out the truth of God's Word every day. Our desire is to create a place where people feel loved, grow in their faith, discover their God-given purpose, and make a positive impact in the world around them.
-            </Typography>
-
-            <Typography
+             <Typography
               variant="overline"sx={{
     py: { xs: 8, md: 12 },
     bgcolor: "#0f172a",
@@ -58,6 +47,18 @@ export default function Founder() {
             >
               OUR FOUNDATION
             </Typography>
+
+            <Typography
+              sx={{
+                color: "whitesmoke",
+                lineHeight: 1.9,
+                mb: 2,
+              }}
+            >
+              We are a church family and part of the Assemblies of God. We are passionate about worship, guided by the Holy Spirit, and committed to living out the truth of God's Word every day. Our desire is to create a place where people feel loved, grow in their faith, discover their God-given purpose, and make a positive impact in the world around them.
+            </Typography>
+
+           
 
 
             
