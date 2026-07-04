@@ -104,13 +104,13 @@ const navItemSx = {
     },
 
     "&:active": {
-      backgroundColor: "#1f1f1f"
+      backgroundColor: "rgba(255,255,255,0.08)",
     },
 
-    "&:hover": {
-      backgroundColor: "#1f1f1f",
-      pl: 4
-    },
+   "&:hover": {
+          backgroundColor: "rgba(255,255,255,0.08)",
+          pl: 4,
+        },
 
     transition: "all 0.4s ease"
   }
