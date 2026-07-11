@@ -11,7 +11,10 @@ export default function MinistryHero({ ministry }) {
     <Box
       sx={{
         position: "relative",
-        height: "75vh",
+        height: {
+  			xs: "50vh",
+  			md: "75vh",
+		},
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -72,7 +75,13 @@ export default function MinistryHero({ ministry }) {
         <Typography
           variant="h1"
           fontWeight="bold"
-          sx={{marginTop: "200px"}}
+          sx={{
+			  marginTop: {
+				  xs: "50px",
+				  md: "200px",
+			  },
+				  
+		  }}
         >
           {ministry.title}
         </Typography>
