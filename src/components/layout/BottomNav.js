@@ -28,12 +28,8 @@ export default function BottomNav() {
     left: 25,
     right: 25,
     height: 60,
-
     display: "flex",
     alignItems: "center",
-
-    px: 1,
-
     borderRadius: "999px",
     background: "rgba(255,255,255,0.1)",
     backdropFilter: "blur(18px)",
@@ -46,29 +42,35 @@ export default function BottomNav() {
   }}
 >
   <Box
-    sx={{
-      flex: 1,
-      overflow: "hidden",
-      whiteSpace: "nowrap",
-    }}
+     sx={{
+    flex: 1,
+    overflow: "hidden",
+    whiteSpace: "nowrap",
+    height: "100%",
+    display: "flex",
+    alignItems: "center",
+    position: "relative",
+  }}
   >
     <Typography
-      sx={{
-        position: "absolute",
-        color: "#fff",
-        display: "inline-block",
-        animation: "textdefil 18s linear infinite",
-      }}
+     sx={{
+      position: "absolute",
+      color: "#fff",
+      display: "inline-block",
+      animation: "textdefil 18s linear infinite",
+      left: "100%",
+    }}
     >
-      Find us on Boulevard de l'Europe Antsalovana 67 Hectare • Sunday 8:30 Growth • 9:30 Prayer • 10:00 Worship Celebration
+      Welcome to Salt & Light Church • Sunday Worship 9:00 AM • Everyone is
+      welcome!
     </Typography>
   </Box>
 
   <Box
     sx={{
       ml: "auto",
-      width: 54,
-      height: 54,
+      width: 60,
+      height: 60,
       borderRadius: "50%",
       bgcolor: "#fff",
 
@@ -92,8 +94,8 @@ export default function BottomNav() {
     outline: "none",
   },
         position: "relative", 
-        width: 55,
-        height: 55,
+        width: 60,
+        height: 60,
         borderRadius: "50%",
         border: "2px solid #c49b63", 
         boxShadow: "0 0 20px rgba(196, 155, 99, 0.75)",
@@ -105,7 +107,7 @@ export default function BottomNav() {
       }}
     >
       <Image
-        src="/images/salt-logo-4.png"
+        src="/images/salt-logo-3.png"
         alt="Logo"
         fill
         style={{
