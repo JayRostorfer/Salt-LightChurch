@@ -37,16 +37,34 @@ export default function MinistriesPreview() {
           relationships, and purpose.
         </Typography>
 
-        <Grid container spacing={4}>
-          {ministries.map((ministry) => (
-            <Grid
-              size={{ xs: 12, md: 4 }}
-              key={ministry.slug}
-            >
-              <MinistryCard ministry={ministry} />
-            </Grid>
-          ))}
-        </Grid>
+       <Grid container spacing={4}>
+  
+  {ministries.slice(0, 3).map((ministry) => (
+    <Grid
+      key={ministry.slug}
+      size={{ xs: 12, md: 4 }}
+    >
+      <MinistryCard ministry={ministry} />
+    </Grid>
+  ))}
+
+
+  <Grid size={{ xs: 0, md: 2 }} />
+
+ 
+  {ministries.slice(3).map((ministry) => (
+    <Grid
+      key={ministry.slug}
+      size={{ xs: 12, md: 4 }}
+    >
+      <MinistryCard ministry={ministry} />
+    </Grid>
+  ))}
+
+  
+  <Grid size={{ xs: 0, md: 2 }} />
+</Grid>
+
       </Container>
     </Box>
   )
