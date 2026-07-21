@@ -27,7 +27,7 @@ export default function BottomNav() {
     bottom: 20,
     left: 25,
     right: 25,
-    height: 60,
+    height: 62,
     display: "flex",
     alignItems: "center",
     borderRadius: "999px",
@@ -107,7 +107,7 @@ export default function BottomNav() {
       }}
     >
       <Image
-        src="/images/salt-logo-3.png"
+        src="/images/salt-logo.png"
         alt="Logo"
         fill
         style={{
