@@ -6,9 +6,6 @@ import BottomNav from "@/components/layout/BottomNav"
 export const metadata = {
   title: "Salt and Light",
   description: "The light of the world",
-  icons: {
-    icon: "images/salt-logo-5.png",
-  }
 }
 
 export default function RootLayout({ children }) {
