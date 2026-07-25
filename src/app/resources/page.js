@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 import {
   Box,
   Container,
@@ -14,195 +14,262 @@ import {
   Dialog,
   DialogContent,
   IconButton,
-} from "@mui/material"
+  Tabs,
+  Tab,
+} from "@mui/material";
 
-import PlayArrowIcon from "@mui/icons-material/PlayArrow"
-import DownloadIcon from "@mui/icons-material/Download"
-import CloseIcon from "@mui/icons-material/Close"
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import DownloadIcon from "@mui/icons-material/Download";
+import CloseIcon from "@mui/icons-material/Close";
 
 const videos = [
   {
     id: 1,
     title: "Strong Marriage - Part 1",
-    description: "Strong Marriage - Part 1",
     thumbnail: "/images/Jay&Carey.jpg",
     video: "/videos/salt.mp4",
   },
   {
     id: 2,
     title: "Strong Marriage - Part 2",
-    description: "Strong Marriage - Part 2",
     thumbnail: "/images/Jay&Carey.jpg",
     video: "/videos/salt.mp4",
   },
   {
     id: 3,
     title: "Strong Marriage - Part 3",
-    description: "Strong Marriage - Part 4",
     thumbnail: "/images/Jay&Carey.jpg",
     video: "/videos/salt.mp4",
   },
   {
     id: 4,
     title: "Strong Marriage - Part 4",
-    description: "Veillée de prière.",
     thumbnail: "/images/Jay&Carey.jpg",
     video: "/videos/salt.mp4",
   },
-]
+];
 
 export default function VideoResources() {
-  const [open, setOpen] = useState(false)
-  const [selectedVideo, setSelectedVideo] = useState(null)
+  const [tab, setTab] = useState(0);
+  const [open, setOpen] = useState(false);
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
+  const latestServiceId =
+    process.env.NEXT_PUBLIC_LATEST_SERVICE_ID || "";
 
   const handleOpen = (video) => {
-    setSelectedVideo(video)
-    setOpen(true)
-  }
+    setSelectedVideo(video);
+    setOpen(true);
+  };
 
   const handleClose = () => {
-    setOpen(false)
-    setSelectedVideo(null)
-  }
+    setOpen(false);
+    setSelectedVideo(null);
+  };
 
   return (
     <>
-      <Container sx={{ 
+      <Container
+        sx={{
           py: { xs: 8, md: 12 },
-         
-        }}>
+        }}
+      >
         <Box
-  textAlign="center"
-  sx={{
-    maxWidth: 850,
-    mx: "auto",
-    mt: 10,
-    mb: 10,
-     
-  }}
->
-  <Typography
-    variant="h3"
-    fontWeight="bold"
-    gutterBottom
-  >
-    Building Stronger Marriages Through God's Word
-  </Typography>
+          textAlign="center"
+          sx={{
+            maxWidth: 850,
+            mx: "auto",
+            mt: 10,
+            mb: 8,
+          }}
+        >
+          <Typography
+            variant="h3"
+            fontWeight="bold"
+            gutterBottom
+          >
+            Building Stronger Marriages Through God's Word
+          </Typography>
 
-  <Typography
-    variant="body1"
-    sx={{
-      color: "whitesmoke",
-      fontSize: "1.1rem",
-      lineHeight: 1.8,
-    }}
-  >
-    Explore our latest marriage teachings and discover practical, Bible-based guidance to help couples grow closer, strengthen their relationship, and build a lasting marriage centered on Christ.
-  </Typography>
-</Box>
+          <Typography
+            variant="body1"
+            sx={{
+              color: "whitesmoke",
+              fontSize: "1.1rem",
+              lineHeight: 1.8,
+            }}
+          >
+            Explore our latest marriage teachings and discover practical,
+            Bible-based guidance to help couples grow closer, strengthen
+            their relationship, and build a lasting marriage centered on
+            Christ.
+          </Typography>
+        </Box>
 
-        <Grid container spacing={4}>
-          {videos.map((video) => (
-            <Grid
-              key={video.id}
-              size={{
-                xs: 12,
-                md: 4,
-              }}
-            >
-              <Card
-                sx={{
-                  height: "100%",
-                  borderRadius: "20px",
-                  overflow: "hidden",
-                  backgroundColor: "#111",
-                  color: "white",
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            mb: 6,
+          }}
+        >
+          <Tabs
+            value={tab}
+            onChange={(e, value) => setTab(value)}
+            centered
+          >
+            <Tab sx={{color:'whitesmoke'}} label="Marriage Teachings" />
+            <Tab sx={{color:'whitesmoke'}} label="Latest Service" />
+          </Tabs>
+        </Box>
+
+        {tab === 0 && (
+          <Grid container spacing={4}>
+            {videos.map((video) => (
+              <Grid
+                key={video.id}
+                size={{
+                  xs: 12,
+                  md: 4,
                 }}
               >
-                <Box sx={{ position: "relative" }}>
-                  <CardMedia
-                    component="img"
-                    image={video.thumbnail}
-                    alt={video.title}
-                    sx={{
-                      height: 220,
-                      objectFit: "cover",
-                    }}
-                  />
+                <Card
+                  sx={{
+                    height: "100%",
+                    borderRadius: "20px",
+                    overflow: "hidden",
+                    backgroundColor: "#111",
+                    color: "white",
+                  }}
+                >
+                  <Box sx={{ position: "relative" }}>
+                    <CardMedia
+                      component="img"
+                      image={video.thumbnail}
+                      alt={video.title}
+                      sx={{
+                        height: 220,
+                        objectFit: "cover",
+                      }}
+                    />
 
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      inset: 0,
-                      background:
-                        "linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1))",
-                    }}
-                  />
+                    <Box
+                      sx={{
+                        position: "absolute",
+                        inset: 0,
+                        background:
+                          "linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,.1))",
+                      }}
+                    />
 
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      top: "50%",
-                      left: "50%",
-                      transform: "translate(-50%, -50%)",
-                      width: 70,
-                      height: 70,
-                      borderRadius: "50%",
-                      backgroundColor: "rgba(255,255,255,0.15)",
-                      backdropFilter: "blur(5px)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <PlayArrowIcon sx={{ fontSize: 40 }} />
+                    <Box
+                      sx={{
+                        position: "absolute",
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%)",
+                        width: 70,
+                        height: 70,
+                        borderRadius: "50%",
+                        backgroundColor: "rgba(255,255,255,.15)",
+                        backdropFilter: "blur(5px)",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <PlayArrowIcon sx={{ fontSize: 40 }} />
+                    </Box>
                   </Box>
-                </Box>
 
-                <CardContent>
-                  <Typography
-                    variant="h6"
-                    fontWeight="bold"
-                    gutterBottom
-                  >
-                    {video.title}
-                  </Typography>
-
-                
-
-                  <Stack
-                    direction="row"
-                    spacing={2}
-                  >
-                    <Button
-                      variant="contained"
-                      startIcon={<PlayArrowIcon />}
-                      onClick={() => handleOpen(video)}
-                      sx={{
-                        flex: 1,
-                      }}
+                  <CardContent>
+                    <Typography
+                      variant="h6"
+                      fontWeight="bold"
+                      gutterBottom
                     >
-                      Watch
-                    </Button>
+                      {video.title}
+                    </Typography>
 
-                    <Button
-                      component="a"
-                      href={video.video}
-                      download
-                      variant="outlined"
-                      startIcon={<DownloadIcon />}
-                      sx={{
-                        flex: 1,
-                      }}
+                    <Stack
+                      direction="row"
+                      spacing={2}
                     >
-                      Download
-                    </Button>
-                  </Stack>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
+                      <Button
+                        variant="contained"
+                        startIcon={<PlayArrowIcon />}
+                        sx={{ flex: 1 }}
+                        onClick={() => handleOpen(video)}
+                      >
+                        Watch
+                      </Button>
+
+                      <Button
+                        component="a"
+                        href={video.video}
+                        download
+                        variant="outlined"
+                        startIcon={<DownloadIcon />}
+                        sx={{ flex: 1 }}
+                      >
+                        Download
+                      </Button>
+                    </Stack>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        )}
+
+        {tab === 1 && (
+          <Box
+            sx={{
+              maxWidth: 1000,
+              mx: "auto",
+            }}
+          >
+            <Typography
+              variant="h4"
+              fontWeight="bold"
+              textAlign="center"
+              gutterBottom
+            >
+              Latest Worship Service
+            </Typography>
+
+            <Typography
+              textAlign="center"
+              color="text.secondary"
+              sx={{
+                mb: 4,
+              }}
+            >
+              Join us by watching our latest worship service.
+            </Typography>
+
+            <Box
+              sx={{
+                borderRadius: 4,
+                overflow: "hidden",
+                boxShadow: 6,
+                bgcolor: "#000",
+              }}
+            >
+              <iframe
+                width="100%"
+                style={{
+                  aspectRatio: "16 / 9",
+                  border: 0,
+                }}
+                src="https://www.youtube.com/embed/nvosN9tIprU?si=2jMRUwPtpJ4ikR9f"
+                title="Latest Service"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </Box>
+          </Box>
+        )}
       </Container>
 
       <Dialog
@@ -226,7 +293,7 @@ export default function VideoResources() {
               right: 10,
               zIndex: 2,
               color: "white",
-              backgroundColor: "rgba(0,0,0,0.5)",
+              backgroundColor: "rgba(0,0,0,.5)",
             }}
           >
             <CloseIcon />
@@ -247,5 +314,5 @@ export default function VideoResources() {
         </DialogContent>
       </Dialog>
     </>
-  )
+  );
 }
