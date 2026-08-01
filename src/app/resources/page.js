@@ -262,7 +262,7 @@ export default function VideoResources() {
                   aspectRatio: "16 / 9",
                   border: 0,
                 }}
-                src="https://www.youtube.com/embed/nvosN9tIprU?si=2jMRUwPtpJ4ikR9f"
+                src={`https://www.youtube.com/embed/${latestServiceId}`}
                 title="Latest Service"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
