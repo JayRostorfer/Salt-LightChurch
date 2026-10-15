@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 
 import MinistryHero from "./MinistryHero";
-import CTASection from "@/components/home/CTASection"
+
 
 // icons
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
@@ -43,25 +43,7 @@ export default function MinistryPageLayout4({ ministry }) {
             {ministry.description}
           </Typography>
         </Box>
-
-      
-
-                      transition: "all 0.3s ease",
-
-                      borderColor: "#c49b63",
-                      boxShadow:
-                        "0 10px 30px rgba(196,155,99,0.2)",
-
-                      "&:hover": {
-                        transform: "translateY(-5px)",
-                        borderColor: "#c49b63",
-                        boxShadow:
-                          "0 10px 30px rgba(196,155,99,0.35)",
-                      },
-                    }}
-                  >
-                    
-                    
+                                  
       </Container>
             
     </Box>
