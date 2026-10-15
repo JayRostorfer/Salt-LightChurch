@@ -45,38 +45,6 @@ export default function MinistryPageLayout4({ ministry }) {
         </Box>
 
       
-        <Box sx={{ mb: 10 }}>
-         
-
-          <Grid container spacing={2}>
-            {ministry.experiences.map((item, index) => {
-              const Icon = item.icon;
-
-              return (
-                <Grid
-                  size={{
-                  xs: 6,
-                  md: 2,
-                }}
-                  key={index}
-                >
-                  <Paper
-                    elevation={0}
-                    sx={{
-                      py: 4,
-                      px: 2,
-                      height: "100%",
-
-                      borderRadius: "20px",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      textAlign: "center",
-
-                      color: "whitesmoke",
-                      backgroundColor: "rgba(255,255,255,0.03)",
-                      border: "1px solid rgba(255,255,255,0.08)",
 
                       transition: "all 0.3s ease",
 
@@ -93,40 +61,9 @@ export default function MinistryPageLayout4({ ministry }) {
                     }}
                   >
                     
-                    <Box
-                      sx={{
-                        mb: 2,
-                        width: 60,
-                        height: 60,
-                        borderRadius: "50%",
-
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-
-                        background:
-                          "rgba(196,155,99,0.15)",
-                        border: "1px solid #c49b63",
-                      }}
-                    >
-                      <Icon sx={{ fontSize: 30, color: "#c49b63" }} />
-                    </Box>
-
-                    {/* LABEL */}
-                    <Typography
-                      variant="h6"
-                      fontWeight={600}
-                    >
-                      {item.label}
-                    </Typography>
-                  </Paper>
-                </Grid>
-              );
-            })}
-          </Grid>
-        </Box>
+                    
       </Container>
-            <CTASection />
+            
     </Box>
   );
 }
