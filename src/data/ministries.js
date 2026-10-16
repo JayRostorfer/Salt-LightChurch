@@ -15,14 +15,6 @@ const ministries = [
 
     heroImage: "/images/ministries/kids.jpg",
 
-    experiences: [
-  { label: "Prayer", icon: VolunteerActivismIcon },
-  { label: "Unity", icon: GroupsIcon },
-  { label: "Fellowship", icon: FavoriteIcon }, 
-  { label: "Prayer", icon: VolunteerActivismIcon },
-  { label: "Unity", icon: GroupsIcon },
-  { label: "Fellowship", icon: FavoriteIcon }
-], 
     gallery: [
       "/images/kids1.jpg",
       "/images/kids1.jpg",
@@ -41,15 +33,7 @@ const ministries = [
       "Blast Kids is a vibrant ministry dedicated to helping children grow spiritually in a safe, joyful, and engaging environment. Through worship, games, bible lessons, and group activities, children develop their faith while building friendships.",
 
     heroImage: "/images/rocksalt1.jpg",
-
-    experiences: [
-  { label: "Prayer", icon: VolunteerActivismIcon },
-  { label: "Unity", icon: GroupsIcon },
-  { label: "Fellowship", icon: FavoriteIcon }, 
-  { label: "Prayer", icon: VolunteerActivismIcon },
-  { label: "Unity", icon: GroupsIcon },
-  { label: "Fellowship", icon: FavoriteIcon }
-], 
+ 
     gallery: [
       "/images/rocksalt1.jpg",
       "/images/rocksalt2.jpg",
@@ -69,16 +53,7 @@ const ministries = [
     description:
       "Young Adults is a community designed for students and young professionals who want to grow deeper in their relationship with God while building authentic relationships.",
 
-    heroImage: "/images/ministries/youth.jpg",
-
-      experiences: [
-  { label: "Prayer", icon: VolunteerActivismIcon },
-  { label: "Unity", icon: GroupsIcon },
-  { label: "Fellowship", icon: FavoriteIcon }, 
-  { label: "Prayer", icon: VolunteerActivismIcon },
-  { label: "Unity", icon: GroupsIcon },
-  { label: "Fellowship", icon: FavoriteIcon }
-], 
+    heroImage: "/images/ministries/youth.jpg", 
 
     gallery: [
       "/images/belight1.jpg",
@@ -100,14 +75,7 @@ const ministries = [
 
     heroImage: "/images/ministries/women.jpg",
 
-      experiences: [
-  { label: "Prayer", icon: VolunteerActivismIcon },
-  { label: "Unity", icon: GroupsIcon },
-  { label: "Fellowship", icon: FavoriteIcon }, 
-  { label: "Prayer", icon: VolunteerActivismIcon },
-  { label: "Unity", icon: GroupsIcon },
-  { label: "Fellowship", icon: FavoriteIcon }
-], 
+      
     gallery: [
       "/images/aroma1.jpg",
       "/images/aroma2.jpg",
@@ -126,14 +94,7 @@ const ministries = [
 
     heroImage:  "/images/influence-men1.jpg",
 
-    experiences: [
-  { label: "Prayer", icon: VolunteerActivismIcon },
-  { label: "Unity", icon: GroupsIcon },
-  { label: "Fellowship", icon: FavoriteIcon }, 
-  { label: "Prayer", icon: VolunteerActivismIcon },
-  { label: "Unity", icon: GroupsIcon },
-  { label: "Fellowship", icon: FavoriteIcon }
-], 
+
     gallery: [
       "/images/influence-men1.jpg",
        "/images/influence-men1.jpg",
