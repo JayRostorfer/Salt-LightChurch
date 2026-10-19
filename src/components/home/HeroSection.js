@@ -55,7 +55,7 @@ export default function HeroSection3() {
     <Box
       sx={{
         height: "100vh",
-        backgroundImage: "url('/images/homee.jpg')",
+        backgroundImage: "url('/images/home.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         position: "relative",
@@ -109,8 +109,8 @@ export default function HeroSection3() {
           sx={{
             fontFamily: allura.style.fontFamily,
             fontSize: {
-              xs: "1.1rem",
-              md: "1.2rem",
+              xs: "3rem",
+              md: "6rem",
             },
             lineHeight: 1.8,
             mb: 4,
