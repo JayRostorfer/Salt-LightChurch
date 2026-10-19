@@ -29,6 +29,8 @@
     "react-scroll": "^1.9.3",
     "resend": "^6.12.4",
     "sweetalert2": "^11.26.25",
-    "swiper": "^12.2.0"
+    "swiper": "^12.2.0", 
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.13.0"
   }
 }
