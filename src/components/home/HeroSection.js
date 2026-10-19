@@ -109,8 +109,8 @@ export default function HeroSection3() {
           sx={{
             fontFamily: allura.style.fontFamily,
             fontSize: {
-              xs: "3rem",
-              md: "6rem",
+              xs: "1.5rem",
+              md: "1.7rem",
             },
             lineHeight: 1.8,
             mb: 4,
