@@ -106,6 +106,7 @@ export default function HeroSection3() {
         {/* Bible Verse */}
         <Typography
           className="hero-verse"
+          variant="h6" 
           sx={{
             fontFamily: allura.style.fontFamily,
             fontSize: {
