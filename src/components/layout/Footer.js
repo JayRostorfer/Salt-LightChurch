@@ -1,71 +1,197 @@
-"use client"
+"use client";
 
-import React from "react"
-import { Box, Typography, IconButton, Stack } from "@mui/material"
-import { FaFacebook, FaYoutube, FaWhatsapp } from "react-icons/fa"
+import React from "react";
+
+import {
+  Box,
+  Container,
+  Typography,
+  IconButton,
+  Stack,
+} from "@mui/material";
+
+import {
+  FaFacebookF,
+  FaYoutube,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 export default function Footer() {
+  const socialLinks = [
+    {
+      name: "Facebook",
+      icon: <FaFacebookF />,
+      href: "https://www.facebook.com/SALTnLIGHTChurchMadagascar",
+    },
+    {
+      name: "YouTube",
+      icon: <FaYoutube />,
+      href: "https://www.youtube.com/@SALTandLIGHTChurchMadagascar",
+    },
+    {
+      name: "WhatsApp",
+      icon: <FaWhatsapp />,
+      href: "https://wa.me/261343957978",
+    },
+  ];
+
   return (
     <Box
       component="footer"
       sx={{
-        background: "linear-gradient(180deg, #020617 0%, #0f172a 50%, #111827 100%)",
-        color: "lightgrey",
-        padding: "2rem 1rem",
-        textAlign: "center",
-		height: "250px",
+        width: "100%",
+        overflow: "hidden",
       }}
     >
-      <Typography variant="h6" gutterBottom>
-        Salt and Light Church 
-      </Typography>
-
-      <Stack 
-          direction="row"
-  spacing={2}
-  sx={{
-    width: "100%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    mb: 2,
-  }}
-	  >
-        
-        <IconButton
-	  aria-label="Facebook"
-  component="a"
-  href="https://www.facebook.com/SALTnLIGHTChurchMadagascar"
-        >
-          <FaFacebook size={30} color="whitesmoke" />
-        </IconButton>
-
-        
-        <IconButton
-          aria-label="YouTube"
-          sx={{ zIndex: 1 }}
-          component="a"
-          href=""
-          target="_blank"
-          rel="noopener"
-        >
-          <FaYoutube size={30} color="whitesmoke" />
-        </IconButton>
 
 
-        <IconButton
-          aria-label="WhatsApp"
-  component="a"
-  href="whatsapp://send?phone=261343957978&text=Bonjour"
-        >
-          <FaWhatsapp size={30} color="whitesmoke" />
-        </IconButton>
-      </Stack>
+      <Box
+        sx={{
+          backgroundColor: "#c49b63",
 
-      <Typography variant="body1" color="whitesmoke">
-        &copy; {new Date().getFullYear()} Salt&Light.
-      </Typography>
+          color: "#173447",
+
+          py: {
+            xs: 9,
+            md: 12,
+          },
+
+          px: {
+            xs: 3,
+            md: 6,
+          },
+        }}
+      >
+        <Container maxWidth="lg">
+
+          {/* CHURCH NAME */}
+
+          <Typography
+            sx={{
+              fontWeight: 900,
+
+              fontSize: {
+                xs: "2rem",
+                md: "2.8rem",
+              },
+
+              lineHeight: 1.2,
+
+              mb: 5,
+            }}
+          >
+            SALT & LIGHT
+            <br />
+            CHURCH
+          </Typography>
+
+
+          {/* CHURCH INFORMATION */}
+
+          <Typography
+            sx={{
+              fontSize: {
+                xs: "1.05rem",
+                md: "1.2rem",
+              },
+
+              lineHeight: 1.9,
+
+              fontWeight: 400,
+
+              mb: 6,
+
+              maxWidth: 650,
+            }}
+          >
+            
+
+            Antananarivo, Madagascar.
+            <br />
+
+            © {new Date().getFullYear()} Salt and Light
+            Church Madagascar.
+            <br />
+
+            All Rights Reserved.
+          </Typography>
+
+
+          {/* SOCIAL MEDIA */}
+
+          <Stack
+            direction="row"
+            spacing={2}
+            sx={{
+              mb: {
+                 xs: 4,  
+                 md: 5, 
+                 },
+              alignItems: "center",
+              justifyContent: "flex-start",
+            }}
+          >
+            {socialLinks.map((social) => (
+
+              <IconButton
+                key={social.name}
+
+                component="a"
+
+                href={social.href || undefined}
+
+                target="_blank"
+
+                rel="noopener noreferrer"
+
+                aria-label={social.name}
+
+                sx={{
+                  width: {
+                    xs: 65,
+                    md: 75,
+                  },
+
+                  height: {
+                    xs: 65,
+                    md: 75,
+                  },
+
+                  borderRadius: "50%",
+
+                  backgroundColor: "#173447",
+
+                  color: "#fff",
+
+                  fontSize: {
+                    xs: 30,
+                    md: 35,
+                  },
+
+                  transition: "all 0.3s ease",
+
+                  "&:hover": {
+                    backgroundColor: "#244b61",
+
+                    transform: "translateY(-6px)",
+                  },
+
+                  "&.Mui-disabled": {
+                    backgroundColor: "#173447",
+                    color: "#fff",
+                    opacity: 0.5,
+                  },
+                }}
+              >
+                {social.icon}
+              </IconButton>
+
+            ))}
+          </Stack>
+
+        </Container>
+      </Box>
+
     </Box>
-  )
+  );
 }
-
