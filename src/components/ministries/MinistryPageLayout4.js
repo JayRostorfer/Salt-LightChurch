@@ -19,7 +19,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 export default function MinistryPageLayout4({ ministry }) {
   return (
     <Box>
-      <MinistryHero ministry={ministry} />
+      <MinistryHero />
 
       <Container
         maxWidth="lg"
@@ -30,7 +30,7 @@ export default function MinistryPageLayout4({ ministry }) {
         {/* ABOUT */}
         <Box sx={{ mb: 10 }}>
           <Typography variant="h3" fontWeight="bold" mb={4}>
-          {ministry.title}
+          ministry.title
           </Typography>
 
           <Typography
@@ -40,7 +40,7 @@ export default function MinistryPageLayout4({ ministry }) {
               color: "white",
             }}
           >
-            {ministry.description}
+            ministry.description
           </Typography>
         </Box>
                                   
