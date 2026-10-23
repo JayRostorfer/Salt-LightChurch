@@ -49,6 +49,7 @@ export default function MinistryCard({ ministry }) {
       <Box
         sx={{
           position: "absolute",
+          bottom: 10,
           left: 30,
           right: 30,
           color: "white",
