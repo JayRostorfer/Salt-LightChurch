@@ -23,6 +23,7 @@ export default function MinistryCard({ ministry }) {
         },
       }}
     >
+      {/* IMAGE */}
       <Box
         component="img"
         src={ministry.heroImage}
@@ -35,6 +36,7 @@ export default function MinistryCard({ ministry }) {
         }}
       />
 
+      {/* OVERLAY */}
       <Box
         className="overlay"
         sx={{
@@ -46,21 +48,38 @@ export default function MinistryCard({ ministry }) {
         }}
       />
 
+      {/* CONTENT */}
       <Box
         sx={{
-          justifyContent: "center", 
+          position: "absolute",
+          inset: 0,
+
+          display: "flex",
+          flexDirection: "column",
+
+          alignItems: "center",
+          justifyContent: "center",
+
+          gap: 2,
+
+          textAlign: "center",
           color: "white",
+
+          px: 3,
         }}
       >
         <Typography
           variant="h4"
-          fontWeight="bold"
-          mb={5}
+          sx={{
+            fontWeight: 700,
+            fontSize: {
+              xs: "1.8rem",
+              md: "2.2rem",
+            },
+          }}
         >
           {ministry.title}
         </Typography>
-
-
 
         <Button
           component={Link}
@@ -68,6 +87,13 @@ export default function MinistryCard({ ministry }) {
           variant="contained"
           sx={{
             backgroundColor: "#c49b63",
+            color: "#fff",
+
+            borderRadius: "30px",
+            px: 3,
+            py: 1,
+
+            textTransform: "none",
 
             "&:hover": {
               backgroundColor: "#ad8350",
