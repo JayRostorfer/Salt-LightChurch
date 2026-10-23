@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 
 
 const ChurchMap = dynamic(
-  () => import("@/components/ChurchMap"),
+  () => import("@/components/home/ChurchMap"),
   {
     ssr: false,
   }
@@ -15,7 +15,7 @@ export default function ContactSection() {
   return (
     <Box 
       sx={{ 
-        background: "linear-gradient(-115deg, #9A7850, #173447)" ,
+        background: "linear-gradient(180deg, #020617 0%, #0f172a 50%, #111827 100%)",
       }}
       maxWidth="lg">
        <Container>
