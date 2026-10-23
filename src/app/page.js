@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 import HeroSection from "@/components/home/HeroSection"
 import MinistriesPreview from "@/components/home/MinistriesPreview"
-import CTASection from "@/components/home/CTASection"
+
 import TeachingsPage from "@/components/home/TeachingsPage";
 import AboutUs from "@/components/home/AboutUs";
 import Founder from "@/components/home/Founder"
