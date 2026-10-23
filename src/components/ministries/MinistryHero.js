@@ -1,12 +1,13 @@
 "use client"
 
+import ministry from "@data/ministries"
 import { Box, Container, Typography } from "@mui/material"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, EffectFade } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/effect-fade"
 
-export default function MinistryHero({ ministry }) {
+export default function MinistryHero() {
   return (
     <Box
       sx={{
@@ -42,7 +43,7 @@ export default function MinistryHero({ ministry }) {
       <Box
         component="img"
         src={image}
-        alt={`${ministry.title} ${index + 1}`}
+        alt="img" 
         sx={{
           width: "100%",
           height: "100%",
