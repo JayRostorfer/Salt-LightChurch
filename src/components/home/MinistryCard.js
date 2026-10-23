@@ -58,7 +58,7 @@ export default function MinistryCard({ ministry }) {
         <Typography
           variant="h4"
           fontWeight="bold"
-          mb={2}
+          mb={5}
         >
           {ministry.title}
         </Typography>
