@@ -6,7 +6,7 @@ import MinistryPageLayout4 from "@/components/ministries/MinistryPageLayout4"
 export default function MinistryPage() {
   
   return (
-    <MinistryPageLayout4 ministry={ministry} />
+    <MinistryPageLayout4  />
     
   )
 }
