@@ -107,7 +107,7 @@ export default function MinistryPageLayout4({
     }, pageRef);
 
     return () => ctx.revert();
-  }, [groups]);
+  }, [groupes]);
 
   return (
     <Box
