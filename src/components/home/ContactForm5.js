@@ -153,8 +153,7 @@ export default function ContactForm5() {
         alignItems: "center",
         px: 2,
         py: 6,
-        background:
-          "linear-gradient(180deg, #020617 0%, #0f172a 50%, #111827 100%)",
+        
       }}
     >
       <Paper
