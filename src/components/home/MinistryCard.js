@@ -63,15 +63,7 @@ export default function MinistryCard({ ministry }) {
           {ministry.title}
         </Typography>
 
-        <Typography
-          variant="body1"
-          sx={{
-            mb: 3,
-            opacity: 0.9,
-          }}
-        >
-          {ministry.shortDescription}
-        </Typography>
+
 
         <Button
           component={Link}
