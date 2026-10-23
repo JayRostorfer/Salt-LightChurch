@@ -107,7 +107,7 @@ export default function MinistryPageLayout4({
     }, pageRef);
 
     return () => ctx.revert();
-  }, [groupes]);
+  }, [groups]);
 
   return (
     <Box
@@ -325,7 +325,7 @@ export default function MinistryPageLayout4({
           MINISTRIES SECTIONS
       ================================= */}
 
-      {groupes.map((groupe, index) => {
+      {groups.map((groupe, index) => {
 
         const reverse = index % 2 !== 0;
 
