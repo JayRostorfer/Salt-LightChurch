@@ -11,10 +11,23 @@ export default function MinistriesPreview2() {
         py: 12,
         textAlign: "center",
         background:
-          "linear-gradient(180deg, #020617 0%, #0f172a 50%, #111827 100%)",
+            "linear-gradient(135deg, #173447, #9A7850)",
       }}
     >
-      <Container maxWidth="xl">
+      <Container
+  maxWidth="xl"
+  disableGutters
+  sx={{
+    pl: {
+      xs: 2,
+      md: 3,
+    },
+    pr: {
+      xs: 0,
+      md: 3,
+    },
+  }}
+>
         {/* Titre */}
         <Typography
           variant="h2"
@@ -42,7 +55,9 @@ export default function MinistriesPreview2() {
           relationships, and purpose.
         </Typography>
 
-
+        {/* ========================================= */}
+        {/* MOBILE : CARTES HORIZONTALES SCROLLABLES */}
+        {/* ========================================= */}
         <Box
           sx={{
             display: {
@@ -63,7 +78,6 @@ export default function MinistriesPreview2() {
             pb: 2,
 
             
-            
           }}
         >
           {ministries.map((ministry) => (
@@ -80,7 +94,9 @@ export default function MinistriesPreview2() {
           ))}
         </Box>
 
-
+        {/* ========================================= */}
+        {/* DESKTOP LAYOUT */}
+        {/* ========================================= */}
         <Box
           sx={{
             display: {
@@ -90,7 +106,7 @@ export default function MinistriesPreview2() {
           }}
         >
           <Grid container spacing={4}>
-            
+            {/* Les 3 premiers ministries */}
             {ministries.slice(0, 3).map((ministry) => (
               <Grid
                 key={ministry.slug}
@@ -100,10 +116,10 @@ export default function MinistriesPreview2() {
               </Grid>
             ))}
 
-            
+            {/* Espace central */}
             <Grid size={{ xs: 0, md: 2 }} />
 
-            
+            {/* Les ministries suivants */}
             {ministries.slice(3).map((ministry) => (
               <Grid
                 key={ministry.slug}
@@ -113,7 +129,7 @@ export default function MinistriesPreview2() {
               </Grid>
             ))}
 
-            
+            {/* Espace final */}
             <Grid size={{ xs: 0, md: 2 }} />
           </Grid>
         </Box>
