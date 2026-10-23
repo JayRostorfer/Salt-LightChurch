@@ -12,7 +12,8 @@ export default function MinistryCard({ ministry }) {
         overflow: "hidden",
         borderRadius: "24px",
         cursor: "pointer",
-
+        
+        WebkitTapHighlightColor: "transparent",
         "&:hover img": {
           transform: "scale(1.08)",
         },
