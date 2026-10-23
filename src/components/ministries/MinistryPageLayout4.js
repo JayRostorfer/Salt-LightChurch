@@ -1,5 +1,7 @@
 "use client";
 
+import ministry from "@/data/ministries";
+
 import groups from "@/data/groups";
 import { useRef, useEffect } from "react";
 
