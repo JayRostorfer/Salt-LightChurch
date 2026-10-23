@@ -31,7 +31,7 @@ export default function HomePage() {
       <HeroSection />
       <Founder />
       <MinistriesPreview />
-      <ContactSection />
+      
     
     
       
