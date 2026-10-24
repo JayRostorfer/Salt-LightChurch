@@ -1,6 +1,5 @@
 "use client"
 
-import { Link as ScrollLink } from "react-scroll";
 import React, { useState } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
@@ -531,62 +530,52 @@ const navItemSx = {
                     }}
                   >
                     {/* AROMA WOMEN */}
-                    <ScrollLink to="aroma-women" smooth duration={500}>
                     <Box
                       component={Link}
-                      href="/groups"
+                      href="/groups#aroma-women"
                       onClick={() => setOpen(false)}
                       sx={accordionLinkSx}
                     >
                       Aroma Women
                     </Box>
-                    </ ScrollLink>
 
-                    <ScrollLink to="influence-men" smooth duration={500}>
                     <Box
                       component={Link}
-                      href="/groups"
+                      href="/groups#influence-men"
                       onClick={() => setOpen(false)}
                       sx={accordionLinkSx}
                     >
-                      Influence Men
+                     Influence Men
                     </Box>
-                    </ ScrollLink>
 
                     {/* YOUNG ADULTS */}
-                    <ScrollLink to="be-light" smooth duration={500}>
                     <Box
                       component={Link}
-                      href="/groups"
+                      href="/groups#be-light"
                       onClick={() => setOpen(false)}
                       sx={accordionLinkSx}
                     >
                       Young Adults
                     </Box>
-                    </ ScrollLink>
-                        
-                    <ScrollLink to="rocksalt" smooth duration={500}>
+
                     <Box
                       component={Link}
-                      href="/groups"
+                      href="/groups#rocksalt"
                       onClick={() => setOpen(false)}
                       sx={accordionLinkSx}
                     >
-                      Rocksalt
+                      Rocksalt Youth
                     </Box>
-                    </ ScrollLink>
 
                     {/* KIDS */}
-                    <ScrollLink to="blast-kids" smooth duration={500}>
                     <Box
                       component={Link}
-                      href="/groups"
+                      href="/groups#blast-kids"
                       onClick={() => setOpen(false)}
                       sx={accordionLinkSx}
                     >
-                      Blast Kids
+                      Kids
                     </Box>
-                    </ ScrollLink>
                   </AccordionDetails>
                 </Accordion>
               </motion.div>
