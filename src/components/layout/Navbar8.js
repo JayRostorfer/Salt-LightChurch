@@ -280,7 +280,7 @@ const navItemSx = {
 >
   <MenuItem
     component={Link}
-    href="/ministries/aroma-women"
+    href="/groups"
     onClick={handleMenuClose}
   >
     Aroma Women
@@ -288,7 +288,7 @@ const navItemSx = {
 
   <MenuItem
     component={Link}
-    href="/ministries/influence-men"
+    href="/groups"
     onClick={handleMenuClose}
   >
     Influence Men
@@ -296,7 +296,7 @@ const navItemSx = {
 
   <MenuItem
     component={Link}
-    href="/ministries/young-adults"
+    href="/groups"
     onClick={handleMenuClose}
   >
     Young Adults
@@ -304,7 +304,7 @@ const navItemSx = {
 
   <MenuItem
     component={Link}
-    href="/ministries/rocksalt"
+    href="/groups"
     onClick={handleMenuClose}
   >
     Rocksalt Youth
@@ -312,36 +312,14 @@ const navItemSx = {
       
   <MenuItem
     component={Link}
-    href="/ministries/kids"
+    href="/groups"
     onClick={handleMenuClose}
   >
     Blast Kids
   </MenuItem>
 </Menu>
               
-                  <Link
-                href="/resources" 
-                style={{
-                  textDecoration: "none"
-                }}
-              >
-                <Button
-                  sx={{
-                    color: "white",
-                    position: "relative",
-                    fontWeight: 500,
-                    "&:hover": {
-                      transform: "scale(1.08)",
-                      transition: "all 0.4s ease"
-                    },
-                    "&:hover::after": {
-                      width: "100%"
-                    }
-                  }}
-                >
-                  Resources
-                </Button>
-              </Link>  
+                  
 
             <Button
               variant="contained"
@@ -554,7 +532,7 @@ const navItemSx = {
                     {/* AROMA WOMEN */}
                     <Box
                       component={Link}
-                      href="/ministries/aroma-women"
+                      href="/groups"
                       onClick={() => setOpen(false)}
                       sx={accordionLinkSx}
                     >
@@ -563,7 +541,7 @@ const navItemSx = {
 
                     <Box
                       component={Link}
-                      href="/ministries/influence-men"
+                      href="/groups"
                       onClick={() => setOpen(false)}
                       sx={accordionLinkSx}
                     >
@@ -573,7 +551,7 @@ const navItemSx = {
                     {/* YOUNG ADULTS */}
                     <Box
                       component={Link}
-                      href="/ministries/young-adults"
+                      href="/ministries/groups"
                       onClick={() => setOpen(false)}
                       sx={accordionLinkSx}
                     >
@@ -582,7 +560,7 @@ const navItemSx = {
 
                     <Box
                       component={Link}
-                      href="/ministries/rocksalt"
+                      href="/groups"
                       onClick={() => setOpen(false)}
                       sx={accordionLinkSx}
                     >
@@ -592,7 +570,7 @@ const navItemSx = {
                     {/* KIDS */}
                     <Box
                       component={Link}
-                      href="/ministries/kids"
+                      href="/groups"
                       onClick={() => setOpen(false)}
                       sx={accordionLinkSx}
                     >
@@ -603,19 +581,7 @@ const navItemSx = {
               </motion.div>
 
               {/* RESOURCES */}
-              <motion.div variants={itemVariants}>
-                <ListItem disablePadding>
-                  <ListItemButton
-                    component={Link}
-                    href="/resources"
-                    disableRipple
-                    onClick={() => setOpen(false)}
-                    sx={navItemSx}
-                  >
-                    <ListItemText primary="Resources" />
-                  </ListItemButton>
-                </ListItem>
-              </motion.div>
+              
 
               {/* CONTACT */}
               <motion.div variants={itemVariants}>
