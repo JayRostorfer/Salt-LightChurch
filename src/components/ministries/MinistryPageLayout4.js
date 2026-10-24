@@ -140,7 +140,7 @@ export default function MinistryPageLayout4({
             md: 20,
           },
 
-          background: "#F8F7F4",
+          background: "grey",
         }}
       >
         <Container maxWidth="lg">
