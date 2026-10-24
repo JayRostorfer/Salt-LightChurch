@@ -76,6 +76,7 @@ return () => ctx.revert();
 }, [isDesktop]);
 
 return (
+  <>
 <Box
 ref={sectionRef}
 sx={{
@@ -201,6 +202,9 @@ What do we believe?
     </Grid>
   </Box>
 </Box>
+
+<WhatWeValue />
+              </>
 
 );
 }
