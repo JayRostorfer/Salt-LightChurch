@@ -1,5 +1,7 @@
 "use client";
 
+import WhatWeValue from "./Values"
+
 import { useLayoutEffect, useRef } from "react";
 import { Box, Typography, Grid, useMediaQuery } from "@mui/material";
 import aboutData from '@/data/aboutus.json';
