@@ -551,7 +551,7 @@ const navItemSx = {
                     {/* YOUNG ADULTS */}
                     <Box
                       component={Link}
-                      href="/ministries/groups"
+                      href="/groups"
                       onClick={() => setOpen(false)}
                       sx={accordionLinkSx}
                     >
