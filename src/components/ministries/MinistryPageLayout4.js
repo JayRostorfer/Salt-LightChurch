@@ -332,6 +332,7 @@ export default function MinistryPageLayout4({
 
         return (
            <Box
+        id={groupe.slug}
       key={groupe.slug || index}
       className="ministry-section"
       sx={{
