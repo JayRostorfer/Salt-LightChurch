@@ -140,7 +140,7 @@ export default function MinistryPageLayout4({
             md: 20,
           },
 
-          background: "black",
+          background: "#9A7850",
         }}
       >
         <Container maxWidth="lg">
@@ -158,7 +158,7 @@ export default function MinistryPageLayout4({
             <Typography
               className="intro-animate"
               sx={{
-                color: "#9A7850",
+                color: "darkcyan",
                 letterSpacing: "4px",
                 fontSize: "0.8rem",
                 fontWeight: 700,
@@ -196,7 +196,7 @@ export default function MinistryPageLayout4({
               <Box
                 component="span"
                 sx={{
-                  color: "#c49b63",
+                  color: "darkcyan",
                 }}
               >
                 For Everyone.
