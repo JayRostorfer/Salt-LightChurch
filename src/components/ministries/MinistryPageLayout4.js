@@ -26,21 +26,6 @@ export default function MinistryPageLayout4({
   useEffect(() => {
     const ctx = gsap.context(() => {
 
-      // INTRODUCTION ANIMATION
-
-      gsap.from(".intro-animate", {
-        scrollTrigger: {
-          trigger: ".intro-section",
-          start: "top 80%",
-          once: true,
-        },
-
-        y: 60,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out",
-      });
 
       // SECTION TITLES
 
@@ -156,9 +141,8 @@ export default function MinistryPageLayout4({
             {/* SMALL LABEL */}
 
             <Typography
-              className="intro-animate"
               sx={{
-                color: "darkcyan",
+                color: "#173447",
                 letterSpacing: "4px",
                 fontSize: "0.8rem",
                 fontWeight: 700,
@@ -172,7 +156,6 @@ export default function MinistryPageLayout4({
             {/* MAIN TITLE */}
 
             <Typography
-              className="intro-animate"
               component="h2"
               sx={{
                 fontSize: {
@@ -196,7 +179,7 @@ export default function MinistryPageLayout4({
               <Box
                 component="span"
                 sx={{
-                  color: "darkcyan",
+                  color: "#173447",
                 }}
               >
                 For Everyone.
@@ -204,42 +187,6 @@ export default function MinistryPageLayout4({
             </Typography>
 
 
-            {/* DESCRIPTION */}
-
-            <Typography
-              className="intro-animate"
-              sx={{
-                fontSize: {
-                  xs: "1.05rem",
-                  md: "1.25rem",
-                },
-
-                lineHeight: 2,
-
-                color: "#5B6770",
-
-                maxWidth: 750,
-                mx: "auto",
-              }}
-            >
-              Paragraph
-            </Typography>
-
-
-            {/* DECORATIVE LINE */}
-
-            <Box
-              className="intro-animate"
-              sx={{
-                width: 80,
-                height: 3,
-                background: "#c49b63",
-                mx: "auto",
-                mt: 6,
-              }}
-            />
-
-          </Box>
 
         </Container>
       </Box>
