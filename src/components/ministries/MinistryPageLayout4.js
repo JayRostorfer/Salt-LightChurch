@@ -123,7 +123,7 @@ export default function MinistryPageLayout4({
           HERO
       ================================= */}
 
-      <MinistryHero ministry={ministry} />
+      <MinistryHero  />
 
 
       {/* =================================
