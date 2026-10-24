@@ -140,7 +140,7 @@ export default function MinistryPageLayout4({
             md: 20,
           },
 
-          background: "grey",
+          background: "black",
         }}
       >
         <Container maxWidth="lg">
@@ -185,7 +185,7 @@ export default function MinistryPageLayout4({
                 lineHeight: 1.15,
                 letterSpacing: "-1.5px",
 
-                color: "#173447",
+                color: "whitesmoke",
 
                 mb: 5,
               }}
