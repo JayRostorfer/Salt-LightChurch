@@ -26,24 +26,6 @@ export default function MinistryPageLayout4({
   useEffect(() => {
     const ctx = gsap.context(() => {
 
-
-
-      // SECTION TITLES
-
-      gsap.from(".ministries-header-animate", {
-        scrollTrigger: {
-          trigger: ".ministries-header",
-          start: "top 85%",
-          once: true,
-        },
-
-        y: 60,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out",
-      });
-
       // EACH MINISTRY SECTION
 
       gsap.utils
@@ -227,22 +209,8 @@ export default function MinistryPageLayout4({
             }}
           >
 
-            <Typography
-              className="ministries-header-animate"
-              sx={{
-                color: "#c49b63",
-                letterSpacing: "4px",
-                fontSize: "0.8rem",
-                fontWeight: 700,
-                mb: 3,
-              }}
-            >
-              EXPLORE OUR MINISTRIES
-            </Typography>
-
 
             <Typography
-              className="ministries-header-animate"
               component="h2"
               sx={{
                 fontSize: {
