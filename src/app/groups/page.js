@@ -1,5 +1,5 @@
 
-import MinistryPageLayout4 from "@components/ministries/MinistryPageLayout4"
+import MinistryPageLayout4 from "@/components/ministries/MinistryPageLayout4"
 
 
 
