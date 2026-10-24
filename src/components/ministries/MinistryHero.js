@@ -1,19 +1,13 @@
 "use client"
 
+import images from "@/data/ImageSwiperData";
 import { Box, Container, Typography } from "@mui/material"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, EffectFade } from "swiper/modules"
-import { Great_Vibes, Allura, Alex_Brush } from "next/font/google";
 import "swiper/css"
 import "swiper/css/effect-fade"
 
-const allura = Allura({
-  subsets: ["latin"],
-  weight: "400",
-});
-
-
-export default function MinistryHero({ ministry }) {
+export default function MinistryHero() {
   return (
     <Box
       sx={{
@@ -28,14 +22,44 @@ export default function MinistryHero({ ministry }) {
         overflow: "hidden",
       }}
     >
-      
+      <Swiper
+  modules={[Autoplay, EffectFade]}
+  effect="fade"
+  autoplay={{
+    delay: 4000,
+    disableOnInteraction: false,
+  }}
+  loop
+  style={{
+    position: "absolute",
+    inset: 0,
+    width: "100%",
+    height: "100%",
+    zIndex: 0,
+  }}
+>
+  {images.map((image) => (
+    <SwiperSlide key={image.id}>
+      <Box
+        component="img"
+        src={image.src}
+        alt={image.alt}
+        sx={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+        }}
+      />
+    </SwiperSlide>
+  ))}
+</Swiper> 
 
       <Box
         sx={{
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(to bottom, #0f172a, #c49b63)",
+            "linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3))",
 	  zIndex: 1,
         }}
       />
@@ -53,7 +77,6 @@ export default function MinistryHero({ ministry }) {
           variant="h1"
           fontWeight="bold"
           sx={{
-			  fontFamily: allura.style.fontFamily,
 			  marginTop: {
 				  xs: "50px",
 				  md: "200px",
@@ -61,7 +84,7 @@ export default function MinistryHero({ ministry }) {
 				  
 		  }}
         >
-          {ministry.title}
+          ministry.title
         </Typography>
 
         <Typography
@@ -70,7 +93,7 @@ export default function MinistryHero({ ministry }) {
             opacity: 0.9,
           }}
         >
-          {ministry.subtitle}
+          ministry.subtitle
         </Typography>
       </Container>
     </Box>
