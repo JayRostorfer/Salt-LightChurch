@@ -531,6 +531,7 @@ const navItemSx = {
                     }}
                   >
                     {/* AROMA WOMEN */}
+                    <ScrollLink to="aroma-women" smooth duration={500}>
                     <Box
                       component={Link}
                       href="/groups"
@@ -539,17 +540,21 @@ const navItemSx = {
                     >
                       Aroma Women
                     </Box>
+                    </ ScrollLink>
 
+                    <ScrollLink to="influence-men" smooth duration={500}>
                     <Box
                       component={Link}
                       href="/groups"
                       onClick={() => setOpen(false)}
                       sx={accordionLinkSx}
                     >
-                     Influence Men
+                      Influence Men
                     </Box>
+                    </ ScrollLink>
 
                     {/* YOUNG ADULTS */}
+                    <ScrollLink to="be-light" smooth duration={500}>
                     <Box
                       component={Link}
                       href="/groups"
@@ -558,25 +563,30 @@ const navItemSx = {
                     >
                       Young Adults
                     </Box>
-
+                    </ ScrollLink>
+                        
+                    <ScrollLink to="rocksalt" smooth duration={500}>
                     <Box
                       component={Link}
                       href="/groups"
                       onClick={() => setOpen(false)}
                       sx={accordionLinkSx}
                     >
-                      Rocksalt Youth
+                      Rocksalt
                     </Box>
+                    </ ScrollLink>
 
                     {/* KIDS */}
+                    <ScrollLink to="blast-kids" smooth duration={500}>
                     <Box
                       component={Link}
                       href="/groups"
                       onClick={() => setOpen(false)}
                       sx={accordionLinkSx}
                     >
-                      Kids
+                      Blast Kids
                     </Box>
+                    </ ScrollLink>
                   </AccordionDetails>
                 </Accordion>
               </motion.div>
