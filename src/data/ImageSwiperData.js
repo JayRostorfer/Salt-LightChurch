@@ -1,20 +1,20 @@
 const images = [
   {
     id: 1,
-    src: "/images/image1.jpg",
-    alt: "",
+    src: "/images/belight1.jpg",
+    alt: "belight",
   
   },
   {
     id: 2,
-    src: "/images/image2.jpg",
-    alt: "",
+    src: "/images/rocksalt1.jpg",
+    alt: "rocksalt",
     
   },
   {
     id: 3,
-    src: "/images/image3.jpg",
-    alt: "",
+    src: "/images/aroma1.jpg",
+    alt: "aroma",
   },
 ];
 
