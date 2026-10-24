@@ -108,7 +108,8 @@ export default function MinistryPageLayout4({
             md: 20,
           },
 
-          background: "#9A7850",
+          background:
+            "linear-gradient(135deg, #173447, #9A7850)",
         }}
       >
         <Container maxWidth="lg">
@@ -581,26 +582,7 @@ export default function MinistryPageLayout4({
           </Typography>
 
 
-          <Typography
-            sx={{
-              fontSize: {
-                xs: "1.05rem",
-                md: "1.2rem",
-              },
-
-              color:
-                "rgba(255,255,255,0.85)",
-
-              lineHeight: 1.9,
-
-              maxWidth: 650,
-
-              mx: "auto",
-            }}
-          >
-            Paragraph
-            
-          </Typography>
+          
 
         </Container>
       </Box>
