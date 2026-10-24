@@ -27,6 +27,7 @@ export default function MinistryPageLayout4({
     const ctx = gsap.context(() => {
 
 
+
       // SECTION TITLES
 
       gsap.from(".ministries-header-animate", {
@@ -187,6 +188,12 @@ export default function MinistryPageLayout4({
             </Typography>
 
 
+            
+
+
+            
+
+          </Box>
 
         </Container>
       </Box>
