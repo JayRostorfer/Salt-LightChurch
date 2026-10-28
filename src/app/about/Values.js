@@ -269,8 +269,7 @@ export default function WhatWeValue() {
       xs: "1fr",
       md: "1fr",
     },
-    borderTop: `1px solid ${colors.border}`,
-  }}
+  }} 
 >
   {values.map((value, index) => (
     <Box
@@ -295,17 +294,8 @@ export default function WhatWeValue() {
         },
 
         
-        borderBottom: {
-          xs:
-            index !== values.length - 1
-              ? `1px solid ${colors.border}`
-              : "none",
-
-          md:
-            index < values.length - 2
-              ? `1px solid ${colors.border}`
-              : "none",
-        },
+        borderBottom: `1px solid ${colors.border}`
+        
       }}
     >
       <Accordion
