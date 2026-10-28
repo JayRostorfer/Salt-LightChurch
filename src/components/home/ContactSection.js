@@ -15,7 +15,7 @@ export default function ContactSection() {
   return (
     <Box 
       sx={{ 
-        background: "linear-gradient(-115deg, #9A7850, #173447)" ,
+        background: "#9A7850",
       }}
       maxWidth="lg">
        <Container>
