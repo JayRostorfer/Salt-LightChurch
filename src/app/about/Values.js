@@ -286,12 +286,12 @@ export default function WhatWeValue() {
 
         pl: {
           xs: 0,
-          md: index % 2 === 0 ? 0 : 6,
+          md: 0,
         },
 
         pr: {
           xs: 0,
-          md: index % 2 === 0 ? 6 : 0,
+          md: 0,
         },
 
         
