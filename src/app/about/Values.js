@@ -1,6 +1,12 @@
 "use client";
 
 import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+} from "@mui/material";
+
+import {
   Box,
   Container,
   Typography,
@@ -254,111 +260,182 @@ export default function WhatWeValue() {
 
         {/* VALUES GRID */}
 
-        <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: {
-              xs: "1fr",
-              md: "1fr 1fr",
-            },
-            borderTop: `1px solid ${colors.border}`,
-          }}
-        >
-          {values.map((value, index) => (
-            <Box
-              component="article"
-              key={value.number}
-              className="value-card"
+       {/* VALUES GRID */}
+
+<Box
+  sx={{
+    display: "grid",
+    gridTemplateColumns: {
+      xs: "1fr",
+      md: "1fr 1fr",
+    },
+    borderTop: `1px solid ${colors.border}`,
+  }}
+>
+  {values.map((value, index) => (
+    <Box
+      component="article"
+      key={value.number}
+      className="value-card"
+      sx={{
+        py: {
+          xs: 4,
+          sm: 6,
+          md: 10,
+        },
+
+        pl: {
+          xs: 0,
+          md: index % 2 === 0 ? 0 : 6,
+        },
+
+        pr: {
+          xs: 0,
+          md: index % 2 === 0 ? 6 : 0,
+        },
+
+        borderRight: {
+          xs: "none",
+          md:
+            index % 2 === 0
+              ? `1px solid ${colors.border}`
+              : "none",
+        },
+
+        borderBottom: {
+          xs:
+            index !== values.length - 1
+              ? `1px solid ${colors.border}`
+              : "none",
+
+          md:
+            index < values.length - 2
+              ? `1px solid ${colors.border}`
+              : "none",
+        },
+      }}
+    >
+      <Accordion
+        disableGutters
+        elevation={0}
+        square
+        sx={{
+          background: "transparent",
+          color: colors.heading,
+
+          "&:before": {
+            display: "none",
+          },
+
+          "&.Mui-expanded": {
+            margin: 0,
+          },
+        }}
+      >
+        {/* ACCORDION HEADER */}
+
+        <AccordionSummary
+          expandIcon={
+            <Typography
               sx={{
-                py: { xs: 4, sm: 5, md: 6 },
-
-                pl: {
-                  xs: 0,
-                  md: index % 2 === 0 ? 0 : 6,
+                fontSize: {
+                  xs: 28,
+                  md: 34,
                 },
-
-                pr: {
-                  xs: 0,
-                  md: index % 2 === 0 ? 6 : 0,
-                },
-
-                borderRight: {
-                  xs: "none",
-                  md:
-                    index % 2 === 0
-                      ? `1px solid ${colors.border}`
-                      : "none",
-                },
-
-                borderBottom: {
-                  xs:
-                    index !== values.length - 1
-                      ? `1px solid ${colors.border}`
-                      : "none",
-
-                  md:
-                    index < 2
-                      ? `1px solid ${colors.border}`
-                      : "none",
-                },
-
-                "&:hover .value-title": {
-                  transform: "translateX(8px)",
-                },
-
-                "&:hover .value-line": {
-                  width: 96,
-                },
+                fontWeight: 300,
+                color: colors.heading,
+                transition: "transform 0.3s ease",
               }}
             >
-              <Stack
-                direction="row"
-                justifyContent="space-between"
-                alignItems="center"
-                sx={{
-                  mb: { xs: 4, md: 5 },
-                }}
-              />
+              +
+            </Typography>
+          }
+          sx={{
+            px: 0,
+            minHeight: "auto",
 
-              {/* VALUE TITLE */}
+            "&.Mui-expanded": {
+              minHeight: "auto",
+            },
 
-              <Typography
-                component="h3"
-                className="value-title"
-                sx={{
-                  fontFamily:
-                    '"Cormorant Garamond", Georgia, serif',
-                  fontSize: {
-                    xs: 40,
-                    sm: 48,
-                    md: 56,
-                  },
-                  fontWeight: 500,
-                  letterSpacing: "-0.025em",
-                  lineHeight: 1.1,
-                  color: colors.heading,
-                  transition: "transform 300ms ease",
-                }}
-              >
-                {value.title}
-              </Typography>
+            "& .MuiAccordionSummary-content": {
+              margin: 0,
+              alignItems: "center",
+            },
 
-              {/* VALUE DESCRIPTION */}
+            "& .MuiAccordionSummary-content.Mui-expanded": {
+              margin: 0,
+            },
 
-              <Typography
-                sx={{
-                  mt: 2.5,
-                  maxWidth: 420,
-                  fontSize: { xs: 14, sm: 15 },
-                  lineHeight: 2,
-                  color: colors.text,
-                }}
-              >
-                {value.description}
-              </Typography>
-            </Box>
-          ))}
-        </Box>
+            "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
+              {
+                transform: "rotate(45deg)",
+              },
+
+            "&:hover .value-title": {
+              transform: "translateX(8px)",
+            },
+          }}
+        >
+          {/* VALUE TITLE */}
+
+          <Typography
+            component="h3"
+            className="value-title"
+            sx={{
+              fontFamily:
+                '"Cormorant Garamond", Georgia, serif',
+
+              fontSize: {
+                xs: 40,
+                sm: 48,
+                md: 56,
+              },
+
+              fontWeight: 500,
+              letterSpacing: "-0.025em",
+              lineHeight: 1.1,
+              color: colors.heading,
+
+              transition: "transform 300ms ease",
+            }}
+          >
+            {value.title}
+          </Typography>
+        </AccordionSummary>
+
+        {/* ACCORDION DESCRIPTION */}
+
+        <AccordionDetails
+          sx={{
+            px: 0,
+            pt: {
+              xs: 3,
+              md: 4,
+            },
+            pb: 0,
+          }}
+        >
+          <Typography
+            sx={{
+              maxWidth: 420,
+
+              fontSize: {
+                xs: 14,
+                sm: 15,
+              },
+
+              lineHeight: 2,
+              color: colors.text,
+            }}
+          >
+            {value.description}
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+    </Box>
+  ))}
+</Box>
 
         {/* CLOSING STATEMENT */}
 
