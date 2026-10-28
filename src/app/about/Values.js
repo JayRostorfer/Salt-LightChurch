@@ -267,7 +267,7 @@ export default function WhatWeValue() {
     display: "grid",
     gridTemplateColumns: {
       xs: "1fr",
-      md: "1fr 1fr",
+      md: "1fr",
     },
     borderTop: `1px solid ${colors.border}`,
   }}
@@ -294,14 +294,7 @@ export default function WhatWeValue() {
           md: index % 2 === 0 ? 6 : 0,
         },
 
-        borderRight: {
-          xs: "none",
-          md:
-            index % 2 === 0
-              ? `1px solid ${colors.border}`
-              : "none",
-        },
-
+        
         borderBottom: {
           xs:
             index !== values.length - 1
