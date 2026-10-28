@@ -426,7 +426,6 @@ export default function WhatWeValue() {
           sx={{
             mt: { xs: 6, md: 9 },
             pt: 4,
-            borderTop: `1px solid ${colors.border}`,
             display: "flex",
             flexDirection: {
               xs: "column",
