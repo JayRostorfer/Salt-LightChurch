@@ -1,318 +1,323 @@
 "use client";
 
-import { useState } from "react";
 import {
   Box,
   Container,
   Grid,
-  Card,
-  CardMedia,
-  CardContent,
   Typography,
   Button,
-  Stack,
-  Dialog,
-  DialogContent,
-  IconButton,
-  Tabs,
-  Tab,
 } from "@mui/material";
 
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import DownloadIcon from "@mui/icons-material/Download";
-import CloseIcon from "@mui/icons-material/Close";
+import Link from "next/link";
 
-const videos = [
-  {
-    id: 1,
-    title: "Strong Marriage - Part 1",
-    thumbnail: "/images/Jay&Carey.jpg",
-    video: "/videos/salt.mp4",
-  },
-  {
-    id: 2,
-    title: "Strong Marriage - Part 2",
-    thumbnail: "/images/Jay&Carey.jpg",
-    video: "/videos/salt.mp4",
-  },
-  {
-    id: 3,
-    title: "Strong Marriage - Part 3",
-    thumbnail: "/images/Jay&Carey.jpg",
-    video: "/videos/salt.mp4",
-  },
-  {
-    id: 4,
-    title: "Strong Marriage - Part 4",
-    thumbnail: "/images/Jay&Carey.jpg",
-    video: "/videos/salt.mp4",
-  },
-];
-
-export default function VideoResources() {
-  const [tab, setTab] = useState(0);
-  const [open, setOpen] = useState(false);
-  const [selectedVideo, setSelectedVideo] = useState(null);
-
-  const latestServiceId =
-    process.env.NEXT_PUBLIC_LATEST_SERVICE_ID || "";
-
-  const handleOpen = (video) => {
-    setSelectedVideo(video);
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-    setSelectedVideo(null);
-  };
-
+export default function LatestService() {
   return (
-    <>
-      <Container
+    <Box
+      component="section"
+      sx={{
+        position: "relative",
+        overflow: "hidden",
+
+        background:
+          "linear-gradient(-115deg, #9A7850 0%, #173447 100%)",
+
+        py: {
+          xs: 10,
+          sm: 12,
+          md: 16,
+        },
+      }}
+    >
+      {/* DECORATIVE GLOW */}
+
+      <Box
         sx={{
-          py: { xs: 8, md: 12 },
+          position: "absolute",
+
+          width: {
+            xs: 300,
+            md: 550,
+          },
+
+          height: {
+            xs: 300,
+            md: 550,
+          },
+
+          borderRadius: "50%",
+
+          background: "rgba(196,155,99,0.12)",
+
+          filter: "blur(110px)",
+
+          top: "-30%",
+          right: "-10%",
+
+          pointerEvents: "none",
+        }}
+      />
+
+      <Container
+        maxWidth="xl"
+        sx={{
+          position: "relative",
+          zIndex: 1,
         }}
       >
-        <Box
-          textAlign="center"
-          sx={{
-            maxWidth: 850,
-            mx: "auto",
-            mt: 10,
-            mb: 8,
+        <Grid
+          container
+          spacing={{
+            xs: 7,
+            md: 6,
+            lg: 10,
           }}
+          alignItems="center"
         >
-          <Typography
-            variant="h3"
-            fontWeight="bold"
-            gutterBottom
-          >
-            Building Stronger Marriages Through God's Word
-          </Typography>
+          {/* LEFT CONTENT */}
 
-          <Typography
-            variant="body1"
-            sx={{
-              color: "whitesmoke",
-              fontSize: "1.1rem",
-              lineHeight: 1.8,
-            }}
-          >
-            Explore our latest marriage teachings and discover practical,
-            Bible-based guidance to help couples grow closer, strengthen
-            their relationship, and build a lasting marriage centered on
-            Christ.
-          </Typography>
-        </Box>
-
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            mb: 6,
-          }}
-        >
-          <Tabs
-            value={tab}
-            onChange={(e, value) => setTab(value)}
-            centered
-          >
-            <Tab sx={{color:'whitesmoke'}} label="Marriage Teachings" />
-            <Tab sx={{color:'whitesmoke'}} label="Latest Service" />
-          </Tabs>
-        </Box>
-
-        {tab === 0 && (
-          <Grid container spacing={4}>
-            {videos.map((video) => (
-              <Grid
-                key={video.id}
-                size={{
-                  xs: 12,
-                  md: 4,
-                }}
-              >
-                <Card
-                  sx={{
-                    height: "100%",
-                    borderRadius: "20px",
-                    overflow: "hidden",
-                    backgroundColor: "#111",
-                    color: "white",
-                  }}
-                >
-                  <Box sx={{ position: "relative" }}>
-                    <CardMedia
-                      component="img"
-                      image={video.thumbnail}
-                      alt={video.title}
-                      sx={{
-                        height: 220,
-                        objectFit: "cover",
-                      }}
-                    />
-
-                    <Box
-                      sx={{
-                        position: "absolute",
-                        inset: 0,
-                        background:
-                          "linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,.1))",
-                      }}
-                    />
-
-                    <Box
-                      sx={{
-                        position: "absolute",
-                        top: "50%",
-                        left: "50%",
-                        transform: "translate(-50%, -50%)",
-                        width: 70,
-                        height: 70,
-                        borderRadius: "50%",
-                        backgroundColor: "rgba(255,255,255,.15)",
-                        backdropFilter: "blur(5px)",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <PlayArrowIcon sx={{ fontSize: 40 }} />
-                    </Box>
-                  </Box>
-
-                  <CardContent>
-                    <Typography
-                      variant="h6"
-                      fontWeight="bold"
-                      gutterBottom
-                    >
-                      {video.title}
-                    </Typography>
-
-                    <Stack
-                      direction="row"
-                      spacing={2}
-                    >
-                      <Button
-                        variant="contained"
-                        startIcon={<PlayArrowIcon />}
-                        sx={{ flex: 1 }}
-                        onClick={() => handleOpen(video)}
-                      >
-                        Watch
-                      </Button>
-
-                      <Button
-                        component="a"
-                        href={video.video}
-                        download
-                        variant="outlined"
-                        startIcon={<DownloadIcon />}
-                        sx={{ flex: 1 }}
-                      >
-                        Download
-                      </Button>
-                    </Stack>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        )}
-
-        {tab === 1 && (
-          <Box
-            sx={{
-              maxWidth: 1000,
-              mx: "auto",
-            }}
-          >
-            <Typography
-              variant="h4"
-              fontWeight="bold"
-              textAlign="center"
-              gutterBottom
-            >
-              Latest Worship Service
-            </Typography>
-
-            <Typography
-              textAlign="center"
-              color="text.secondary"
-              sx={{
-                mb: 4,
-              }}
-            >
-              Join us by watching our latest worship service.
-            </Typography>
-
+          <Grid size={{ xs: 12, md: 5 }}>
             <Box
               sx={{
-                borderRadius: 4,
-                overflow: "hidden",
-                boxShadow: 6,
-                bgcolor: "#000",
+                maxWidth: 520,
+
+                textAlign: {
+                  xs: "center",
+                  md: "left",
+                },
+
+                mx: {
+                  xs: "auto",
+                  md: 0,
+                },
               }}
             >
-              <iframe
-                width="100%"
-                style={{
-                  aspectRatio: "16 / 9",
-                  border: 0,
+              {/* SMALL LABEL */}
+
+              <Typography
+                sx={{
+                  color: "#f8dfb5",
+
+                  fontWeight: 700,
+
+                  letterSpacing: "3px",
+
+                  textTransform: "uppercase",
+
+                  fontSize: {
+                    xs: "0.7rem",
+                    md: "0.8rem",
+                  },
+
+                  mb: 2,
                 }}
-                src={`https://www.youtube.com/embed/${latestServiceId}`}
-                title="Latest Service"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
+              >
+                LATEST SERVICE
+              </Typography>
+
+              {/* MAIN TITLE */}
+
+              <Typography
+                component="h2"
+                sx={{
+                  color: "#fff",
+
+                  fontWeight: 800,
+
+                  lineHeight: 1.1,
+
+                  letterSpacing: "-0.035em",
+
+                  fontSize: {
+                    xs: "2.5rem",
+                    sm: "3.2rem",
+                    md: "3.5rem",
+                    lg: "4.2rem",
+                  },
+
+                  mb: 3,
+                }}
+              >
+                A heart of
+                <Box
+                  component="span"
+                  sx={{
+                    display: "block",
+                    color: "#f8dfb5",
+                  }}
+                >
+                  Worship,
+                </Box>
+                A word to live by. 
+              </Typography>
+
+              {/* DESCRIPTION */}
+
+              <Typography
+                sx={{
+                  color: "rgba(255,255,255,0.8)",
+
+                  lineHeight: 1.9,
+
+                  fontSize: {
+                    xs: "1rem",
+                    md: "1.1rem",
+                  },
+
+                  mb: 4,
+
+                  maxWidth: 480,
+
+                  mx: {
+                    xs: "auto",
+                    md: 0,
+                  },
+                }}
+              >
+                Watch our latest service and receive the message that God has for you. 
+              </Typography>
+
+              {/* BUTTON */}
+
+              <Button
+                component={Link}
+                href=""
+                variant="contained"
+                sx={{
+                  background: "#fff",
+
+                  color: "#173447",
+
+                  px: {
+                    xs: 4,
+                    md: 5,
+                  },
+
+                  py: 1.7,
+
+                  borderRadius: "50px",
+
+                  textTransform: "none",
+
+                  fontWeight: 700,
+
+                  fontSize: "0.95rem",
+
+                  boxShadow:
+                    "0 10px 30px rgba(0,0,0,0.15)",
+
+                  transition: "all 0.3s ease",
+
+                  "&:hover": {
+                    background: "#f8dfb5",
+
+                    transform: "translateY(-3px)",
+
+                    boxShadow:
+                      "0 15px 35px rgba(0,0,0,0.2)",
+                  },
+                }}
+              >
+                Watch More Services
+              </Button>
             </Box>
-          </Box>
-        )}
-      </Container>
+          </Grid>
 
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        fullWidth
-        maxWidth="lg"
-      >
-        <DialogContent
-          sx={{
-            p: 0,
-            position: "relative",
-            backgroundColor: "#000",
-          }}
-        >
-          <IconButton
-            onClick={handleClose}
-            sx={{
-              position: "absolute",
-              top: 10,
-              right: 10,
-              zIndex: 2,
-              color: "white",
-              backgroundColor: "rgba(0,0,0,.5)",
-            }}
-          >
-            <CloseIcon />
-          </IconButton>
+          {/* RIGHT VIDEO */}
 
-          {selectedVideo && (
-            <video
-              controls
-              autoPlay
-              width="100%"
+          <Grid size={{ xs: 12, md: 7 }}>
+            <Box
+              sx={{
+                position: "relative",
+
+                width: "100%",
+
+                maxWidth: 900,
+
+                mx: "auto",
+              }}
             >
-              <source
-                src={selectedVideo.video}
-                type="video/mp4"
+              {/* DECORATIVE BORDER */}
+
+              <Box
+                sx={{
+                  position: "absolute",
+
+                  top: {
+                    xs: -10,
+                    md: -18,
+                  },
+
+                  left: {
+                    xs: -10,
+                    md: -18,
+                  },
+
+                  right: {
+                    xs: -10,
+                    md: -18,
+                  },
+
+                  bottom: {
+                    xs: 10,
+                    md: 18,
+                  },
+
+                  border:
+                    "1px solid rgba(248,223,181,0.45)",
+
+                  borderRadius: {
+                    xs: "20px",
+                    md: "30px",
+                  },
+
+                  pointerEvents: "none",
+                }}
               />
-            </video>
-          )}
-        </DialogContent>
-      </Dialog>
-    </>
+
+              {/* VIDEO */}
+
+              <Box
+                sx={{
+                  position: "relative",
+
+                  width: "100%",
+
+                  aspectRatio: "16 / 9",
+
+                  borderRadius: {
+                    xs: "14px",
+                    md: "24px",
+                  },
+
+                  overflow: "hidden",
+
+                  bgcolor: "#000",
+
+                  boxShadow:
+                    "0 25px 70px rgba(0,0,0,0.3)",
+
+                  zIndex: 1,
+                }}
+              >
+                <Box
+                  component="iframe"
+                  src="https://www.youtube.com/embed/nvosN9tIprU"
+                  title="Latest Worship Service"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                    border: 0,
+                    display: "block",
+                  }}
+                />
+              </Box>
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
   );
 }
