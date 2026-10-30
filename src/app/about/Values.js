@@ -32,15 +32,13 @@ const values = [
     number: "02",
     title: "Worship",
     description:
-      "We worship God through our daily lives, honoring Him in all we do and giving Him our hearts.
-",
+      "We worship God through our daily lives, honoring Him in all we do and giving Him our hearts.",
   },
   {
     number: "03",
     title: "Unity",
     description:
-      "We grow stronger together by sharing God's love, supporting one another, and living as one family in Christ.
-",
+      "We grow stronger together by sharing God's love, supporting one another, and living as one family in Christ.",
   },
   {
     number: "04",
