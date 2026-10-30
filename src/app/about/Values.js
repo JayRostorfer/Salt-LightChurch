@@ -26,25 +26,27 @@ const values = [
     number: "01",
     title: "Faith",
     description:
-      "text",
+      "Our faith in Jesus is the foundation of our lives, guiding us and shaping who we are.",
   },
   {
     number: "02",
     title: "Worship",
     description:
-      "text",
+      "We worship God through our daily lives, honoring Him in all we do and giving Him our hearts.
+",
   },
   {
     number: "03",
     title: "Unity",
     description:
-      "text",
+      "We grow stronger together by sharing God's love, supporting one another, and living as one family in Christ.
+",
   },
   {
     number: "04",
     title: "Service",
     description:
-      "text",
+      "We use our gifts and talents to help others, serve our community, and share God's love through our actions.",
   },
 ];
 
