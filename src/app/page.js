@@ -8,7 +8,6 @@ import MinistriesPreview from "@/components/home/MinistriesPreview"
 import TeachingsPage from "@/components/home/TeachingsPage";
 import AboutUs from "@/components/home/AboutUs";
 import Founder from "@/components/home/Founder"
-import ContactSection from "@/components/home/ContactSection"
 
 export default function HomePage() {
   useEffect(() => {
@@ -31,7 +30,7 @@ export default function HomePage() {
       <HeroSection />
       <Founder />
       <MinistriesPreview />
-      <ContactSection />
+       
       
     
     
