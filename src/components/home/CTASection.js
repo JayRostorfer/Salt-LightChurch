@@ -245,9 +245,7 @@ export default function ContactCTA() {
                 },
               }}
             >
-              Have a question, need prayer, or simply want
-              to connect? We're here for you and would
-              love to hear from you.
+              Do you want to know more about us or have something you'd like to ask? We'd love to connect with you!
             </Typography>
           </Box>
 
