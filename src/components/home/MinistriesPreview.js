@@ -52,8 +52,7 @@ export default function MinistriesPreview2() {
             color: "whitesmoke",
           }}
         >
-          Discover communities designed to help every generation grow in faith,
-          relationships, and purpose.
+          Different generations, one family, growing together in Christ.
         </Typography>
 
         {/* ========================================= */}
