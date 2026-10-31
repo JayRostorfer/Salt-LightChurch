@@ -109,8 +109,8 @@ export default function MinistryPageLayout4({
           },
 
           background:
-            "linear-gradient(135deg, #173447, #9A7850)",
-        }}
+          "linear-gradient(115deg, #173447 0%, #24485A 50%, #9A7850 100%)",
+     }}
       >
         <Container maxWidth="lg">
 
