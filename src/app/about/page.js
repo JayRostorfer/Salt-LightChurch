@@ -78,6 +78,7 @@ return () => ctx.revert();
 
 return (
   <>
+  <AboutHero />
 <Box
 ref={sectionRef}
 sx={{
@@ -94,7 +95,7 @@ maxWidth: 1200,
 mx: "auto",
 }}
 >
-<AboutHero />
+
 
     
 
