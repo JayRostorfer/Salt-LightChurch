@@ -576,9 +576,7 @@ export default function MinistryPageLayout4({
               mb: 4,
             }}
           >
-            Life Is Better
-            <br />
-            Together.
+            You Matter Here.
           </Typography>
 
 
