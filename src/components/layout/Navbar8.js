@@ -322,6 +322,8 @@ const navItemSx = {
                   
 
             <Button
+              component={Link} 
+              href="/contact" 
               variant="contained"
               sx={{
                 backgroundColor: "#c49b63",
@@ -337,7 +339,7 @@ const navItemSx = {
                 transition: "all 0.4s ease"
               }}
             >
-              Join Us
+              Get in touch
             </Button>
           </Box>
 
@@ -588,12 +590,12 @@ const navItemSx = {
                 <ListItem disablePadding>
                   <ListItemButton
                     component={Link}
-                    href="/contact"
+                    href="/resources"
                     disableRipple
                     onClick={() => setOpen(false)}
                     sx={navItemSx}
                   >
-                    <ListItemText primary="Contact" />
+                    <ListItemText primary="Resources" />
                   </ListItemButton>
                 </ListItem>
               </motion.div>
@@ -602,6 +604,8 @@ const navItemSx = {
             {/* CTA BUTTON */}
             <motion.div variants={itemVariants}>
               <Button
+                component={Link}
+                href="/contact"
                 variant="contained"
                 fullWidth
                 sx={{
@@ -620,7 +624,7 @@ const navItemSx = {
                   transition: "all 0.4s ease"
                 }}
               >
-                Join Us
+                Get in touch
               </Button>
             </motion.div>
           </Box>
