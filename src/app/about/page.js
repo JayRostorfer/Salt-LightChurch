@@ -1,5 +1,6 @@
 "use client";
 
+import AboutHero from "./AboutHero"
 import WhatWeValue from "./Values"
 
 import { useLayoutEffect, useRef } from "react";
@@ -93,19 +94,7 @@ maxWidth: 1200,
 mx: "auto",
 }}
 >
-<Typography
-variant="h3"
-              sx={{
-                fontWeight: 700,
-                color: "whitesmoke",
-                mb: 3,
-                mt: 1,
-              }}
-
-align="center"
->
-What do we believe?
-</Typography>
+<AboutHero />
 
     
 
