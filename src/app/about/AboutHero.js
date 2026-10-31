@@ -7,7 +7,7 @@ import { Great_Vibes, Allura, Alex_Brush } from "next/font/google";
 import "swiper/css"
 import "swiper/css/effect-fade"
 
-const allura = Allura({
+const gv = Great_Vibes({
   subsets: ["latin"],
   weight: "400",
 });
@@ -50,10 +50,10 @@ export default function AboutHero() {
         }}
       >
         <Typography
-          variant="h1"
+          variant="h3"
           fontWeight="bold"
           sx={{
-			  fontFamily: allura.style.fontFamily,
+			  fontFamily: gv.style.fontFamily,
 			  marginTop: {
 				  xs: "50px",
 				  md: "200px",
