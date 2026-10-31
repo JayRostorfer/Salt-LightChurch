@@ -30,15 +30,16 @@ export default function MinistriesPreview2() {
 >
         {/* Titre */}
         <Typography
-          variant="h2"
+          variant="h3"
           textAlign="center"
-          fontWeight="bold"
-          mb={2}
-          sx={{
-            color: "whitesmoke",
-          }}
+              sx={{
+                color: "whitesmoke", 
+                fontWeight: 700,
+                mb: 3,
+                mt: 1,
+              }}
         >
-          Our Ministries
+          Our Groups
         </Typography>
 
         {/* Description */}
