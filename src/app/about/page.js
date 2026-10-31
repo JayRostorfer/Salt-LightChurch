@@ -94,14 +94,15 @@ mx: "auto",
 }}
 >
 <Typography
-component="h2"
 variant="h3"
+              sx={{
+                fontWeight: 700,
+                color: "whitesmoke",
+                mb: 3,
+                mt: 1,
+              }}
+
 align="center"
-fontWeight="bold"
-sx={{
-color: "whitesmoke",
-mb: 2,
-}}
 >
 What do we believe?
 </Typography>
