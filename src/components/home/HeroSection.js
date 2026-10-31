@@ -103,6 +103,51 @@ export default function HeroSection3() {
           Salt and Light
         </Typography>
 
+        <Typography
+      component="p"
+      className="hero-church"
+      sx={{
+        fontFamily: "inherit",
+        fontSize: {
+          xs: "0.68rem",
+          sm: "0.8rem",
+          md: "0.95rem",
+        },
+        fontWeight: 500,
+        letterSpacing: {
+          xs: "0.12em",
+          sm: "0.2em",
+          md: "0.28em",
+        },
+        lineHeight: 1.8,
+        textTransform: "uppercase",
+        color: "#c49b63",
+        mb: {
+          xs: 4,
+          md: 5,
+        },
+      }}
+    >
+      Assemblée de Dieu anglophone
+    </Typography>
+
+        <Box
+      aria-hidden="true"
+      sx={{
+        width: {
+          xs: 55,
+          md: 75,
+        },
+        height: "2px",
+        background:
+          "linear-gradient(90deg, transparent, #c49b63, transparent)",
+        mb: {
+          xs: 3,
+          md: 4,
+        },
+      }}
+    />
+
         {/* Bible Verse */}
         <Typography
           className="hero-verse"
@@ -121,63 +166,7 @@ export default function HeroSection3() {
           — Matthew 5:13-14
         </Typography>
 
-        {/* Buttons */}
-        <Stack
-          className="hero-buttons"
-          direction={{
-            xs: "column",
-            sm: "row",
-          }}
-          spacing={2}
-          sx={{
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          {/* Join Us */}
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "#c49b63",
-              px: 4,
-              py: 1.5,
-              borderRadius: "40px",
-              minWidth: "150px",
-              transition: "all 0.3s ease",
-
-              "&:hover": {
-                backgroundColor: "#b38a52",
-                transform: "translateY(-3px)",
-                boxShadow: "0 8px 20px rgba(196, 155, 99, 0.35)",
-              },
-            }}
-          >
-            Join Us
-          </Button>
-
-          {/* Explore Groups */}
-          <Button
-            variant="outlined"
-            sx={{
-              borderColor: "white",
-              color: "white",
-              px: 4,
-              py: 1.5,
-              borderRadius: "40px",
-              minWidth: "170px",
-              transition: "all 0.3s ease",
-
-              "&:hover": {
-                borderColor: "#c49b63",
-                color: "#c49b63",
-                backgroundColor: "rgba(196, 155, 99, 0.08)",
-                transform: "translateY(-3px)",
-              },
-            }}
-          >
-            Explore Groups
-          </Button>
-        </Stack>
+        
       </Box>
     </Box>
   )
