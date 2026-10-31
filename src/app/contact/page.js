@@ -228,9 +228,7 @@ export default function ContactHero() {
                   maxWidth: 480,
                 }}
               >
-                Whether you have a question, need prayer,
-                or simply want to say hello, we'd love
-                to hear from you.
+                Do you want to know more about us or have something you'd like to ask? We'd love to connect with you!
               </Typography>
 
               {/* DECORATIVE LINE */}
