@@ -8,6 +8,8 @@ import MinistriesPreview from "@/components/home/MinistriesPreview"
 import TeachingsPage from "@/components/home/TeachingsPage";
 import AboutUs from "@/components/home/AboutUs";
 import Founder from "@/components/home/Founder"
+import CTASection from "@/components/home/CTASection"
+
 
 export default function HomePage() {
   useEffect(() => {
@@ -30,7 +32,7 @@ export default function HomePage() {
       <HeroSection />
       <Founder />
       <MinistriesPreview />
-       
+      <CTASection />
       
     
     
