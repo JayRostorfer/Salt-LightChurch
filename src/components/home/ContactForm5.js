@@ -202,8 +202,7 @@ export default function ContactForm5() {
           mb: 4,
         }}
       >
-        Have a question or prayer request?
-        We'd love to hear from you.
+        Send us a message and we will get back to you soon.
       </Typography>
 
       <Box component="form" onSubmit={handleSubmit}>
