@@ -325,6 +325,7 @@ const navItemSx = {
               component={Link} 
               href="/contact" 
               variant="contained"
+              onClick={() => setOpen(false)}
               sx={{
                 backgroundColor: "#c49b63",
                 borderRadius: "30px",
@@ -606,6 +607,7 @@ const navItemSx = {
               <Button
                 component={Link}
                 href="/contact"
+                onClick={() => setOpen(false)}
                 variant="contained"
                 fullWidth
                 sx={{
