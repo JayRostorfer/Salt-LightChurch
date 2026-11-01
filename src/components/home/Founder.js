@@ -34,6 +34,7 @@ export default function Founder() {
             <Typography
               variant="h3"
               sx={{
+                color:"whitesmoke", 
                 fontWeight: 700,
                 mb: 3,
                 mt: 1,
