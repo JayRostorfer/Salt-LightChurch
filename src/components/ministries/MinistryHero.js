@@ -110,7 +110,7 @@ export default function MinistryHero() {
             userSelect: "none",
           }}
         >
-          Salt and Light
+          Salt & Light
         </Typography>
       </Container>
     </Box>
