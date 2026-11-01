@@ -16,54 +16,50 @@ const gv = Great_Vibes({
 export default function AboutHero() {
   return (
     <Box
+  sx={{
+    position: "relative",
+    height: {
+      xs: "50vh",
+      md: "75vh",
+    },
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+
+    background:
+      "linear-gradient(115deg, #173447 0%, #24485A 50%, #9A7850 100%)",
+  }}
+>
+  {/* Overlay avec backdropFilter */}
+  <Box
+    sx={{
+      position: "absolute",
+      inset: 0,
+      backdropFilter: "blur(30px)",
+      WebkitBackdropFilter: "blur(30px)",
+      background: "rgba(255,255,255,0.03)",
+      zIndex: 1,
+    }}
+  />
+
+  <Container
+    maxWidth="lg"
+    sx={{
+      position: "relative",
+      zIndex: 2,
+      color: "white",
+      textAlign: "center",
+    }}
+  >
+    <Typography
+      variant="h3"
       sx={{
-        position: "relative",
-        height: {
-  			xs: "50vh",
-  			md: "75vh",
-		},
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        overflow: "hidden",
+        fontWeight: 700,
       }}
     >
-      
-
-      <Box
-        sx={{
-          position: "absolute",
-          inset: 0,
-		 filter: "blur(30px)",
-          background:
-          "linear-gradient(115deg, #173447 0%, #24485A 50%, #9A7850 100%)",
-
-	  zIndex: 1,
-        }}
-      />
-
-      <Container
-        maxWidth="lg"
-        sx={{
-          position: "relative",
-          zIndex: 2,
-          color: "white",
-          textAlign: "center",
-        }}
-      >
-        <Typography
-          variant="h3"
-			  
-              sx={{
-                fontWeight: 700,
-              }}
-			    
-        >
-          What do we believe? 
-        </Typography>
-
-        
-      </Container>
-    </Box>
-  )
+      What do we believe?
+    </Typography>
+  </Container>
+</Box>
 }
