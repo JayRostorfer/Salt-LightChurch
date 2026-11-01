@@ -26,53 +26,85 @@ export default function Founder() {
   const questionRef = useRef(null);
 
   useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
-    const ctx = gsap.context(() => {
+  const ctx = gsap.context(() => {
+    const words = headingRef.current.querySelectorAll(".heading-word");
 
-      // Animation du titre
-      const words = headingRef.current.querySelectorAll(".heading-word");
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 75%",
+        once: true,
+      },
+    });
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-          once: true,
-        },
-      });
+    
+    tl.fromTo(
+      words,
+      {
+        y: 50,
+        opacity: 0,
+        filter: "blur(8px)",
+      },
+      {
+        y: 0,
+        opacity: 1,
+        filter: "blur(0px)",
+        duration: 1,
+        stagger: 0.25,
+        ease: "power3.out",
+      }
+    );
 
-      tl.fromTo(
-        words,
-        {
-          y: 50,
-          opacity: 0,
-          filter: "blur(8px)",
-        },
-        {
-          y: 0,
-          opacity: 1,
-          filter: "blur(0px)",
-          duration: 1,
-          stagger: 0.25,
-          ease: "power3.out",
-        }
-      );
+  
+    tl.fromTo(
+      questionRef.current,
+      {
+        y: -35,
+        rotation: -25,
+        scale: 0.5,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        rotation: 0,
+        scale: 1,
+        opacity: 1,
+        duration: 1.2,
+        ease: "elastic.out(1, 0.35)",
+      }
+    );
 
-      // Oscillation du point d'interrogation
-      gsap.to(questionRef.current, {
-        rotation: 18,
-        duration: 0.8,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-        transformOrigin: "center bottom",
-        delay: 1.2,
-      });
+    // Petite oscillation finale
+    tl.to(questionRef.current, {
+      rotation: 15,
+      duration: 0.2,
+      ease: "power1.inOut",
+    });
 
-    }, sectionRef);
+    tl.to(questionRef.current, {
+      rotation: -10,
+      duration: 0.25,
+      ease: "power1.inOut",
+    });
 
-    return () => ctx.revert();
-  }, []);
+    tl.to(questionRef.current, {
+      rotation: 5,
+      duration: 0.2,
+      ease: "power1.inOut",
+    });
+
+    tl.to(questionRef.current, {
+      rotation: 0,
+      duration: 0.25,
+      ease: "power1.out",
+    });
+
+  }, sectionRef);
+
+  return () => ctx.revert();
+}, []);
 
   return (
     <Box
