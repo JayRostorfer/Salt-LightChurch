@@ -107,10 +107,11 @@ export default function MinistryPageLayout4({
             xs: 12,
             md: 20,
           },
-          filter: "blur(30px)",
+          
 
           background:
           "linear-gradient(115deg, #173447 0%, #24485A 50%, #9A7850 100%)",
+          filter: "blur(30px)",
      }}
       >
         <Container maxWidth="lg">
