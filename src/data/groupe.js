@@ -4,7 +4,7 @@ const groupes = [
     title: "Blast Kids",
     img: "/images/blast-kids1.jpg",
     descri:
-      "Blast Kids is a joyful and welcoming community where children discover God's love through Bible stories, worship, games, and meaningful friendships. We create a safe and fun environment where every child can grow in faith and feel loved.",
+      "Blast Kids gives children a fun place to discover who God is and learn about His love. Through Bible stories, games, and creative activities, we help them grow in faith, develop good values, and get to know Jesus more each day. ",
   },
 
   {
@@ -12,7 +12,7 @@ const groupes = [
     title: "RockSalt Youth",
     img: "/images/rocksalt1.jpg",
     descri:
-      "RockSalt Youth is a place where young people come together to grow in faith, build genuine friendships, and discover their God-given purpose. Through worship, fellowship, and shared experiences, we encourage each other to live boldly for Christ.",
+      "Rocksalt Youth is where young people come together to explore their faith, grow closer to God, and navigate life's challenges with confidence. Through  Bible teaching, and shared experiences, we encourage them to stand firm in what they believe and live out their faith every day.",
   },
 
   {
@@ -20,7 +20,7 @@ const groupes = [
     title: "Be Light",
     img: "/images/be-light-karting.jpg",
     descri:
-      "Be Light brings young adults together to build meaningful relationships, grow spiritually, and encourage one another through life's journey. It's a community where faith becomes part of everyday life.",
+      "Be Light brings young adults together to grow in their walk with God and discover His purpose for their lives. It's a place to share experiences, explore the Word, encourage one another, and learn how to reflect Christ in their daily lives.",
   },
 
   {
@@ -28,7 +28,7 @@ const groupes = [
     title: "Aroma Women",
     img: "/images/aroma1.jpg",
     descri:
-      "Aroma Women is a welcoming sisterhood where women of different generations connect, support one another, and grow in their relationship with God. Together, we share life's joys and challenges while building lasting friendships.",
+      "Aroma Women is a place where women can grow closer to God, share their experiences, and encourage one another through every season of life. Through prayer, Bible study, and time spent together, we inspire each other to live out our faith, grow in His love, and reflect His grace in our everyday lives.", 
   },
 
   {
@@ -36,7 +36,7 @@ const groupes = [
     title: "Influence Men",
     img: "/images/influence-men1.jpg",
     descri:
-      "Influence Men is a brotherhood where men encourage one another to grow in faith, strengthen their families, and live with integrity and purpose. Through fellowship and meaningful conversations, we build relationships rooted in Christ.",
+      "Influence Men brings men together to strengthen their faith, grow in their walk with God, and encourage one another to become the men He has called them to be. Through prayer, biblical teaching, and open conversations, we learn to lead by example, serve with humility, and live out our faith in our families, workplaces, and everyday lives.",
   },
 ];
 
