@@ -141,7 +141,7 @@ export default function MinistriesPreview2() {
         <Typography
           textAlign="center"
           sx={{
-            maxWidth: 700,
+            maxWidth: 600,
             mx: "auto",
             mt: 4,
             mb: 4,
