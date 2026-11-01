@@ -4,7 +4,7 @@ import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 
 const ministries = [
   {
-    slug: "kids",
+    slug: "blast-kids",
     title: "Blast Kids",
     subtitle: "Safe, Fun & Growing in Faith",
     shortDescription:
@@ -43,7 +43,7 @@ const ministries = [
   
 
   {
-    slug: "young-adults",
+    slug: "be-light",
     title: "Young Adults",
     subtitle: "Faith, Community & Purpose",
 
