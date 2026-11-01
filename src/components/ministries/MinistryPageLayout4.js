@@ -264,7 +264,7 @@ export default function MinistryPageLayout4({ ministry }) {
                 className="intro-highlight"
                 sx={{
                   display: "inline-block",
-                  color: "#173447",
+                  color: "#f8dfb5",
                 }}
               >
                 For Everyone.
