@@ -35,7 +35,8 @@ export default function AboutHero() {
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(to bottom, #0f172a, #c49b63)",
+          "linear-gradient(115deg, #173447 0%, #24485A 50%, #9A7850 100%)",
+
 	  zIndex: 1,
         }}
       />
@@ -51,15 +52,11 @@ export default function AboutHero() {
       >
         <Typography
           variant="h3"
-          fontWeight="bold"
-          sx={{
-			  fontFamily: gv.style.fontFamily,
-			  marginTop: {
-				  xs: "50px",
-				  md: "200px",
-			  },
-				  
-		  }}
+			  
+              sx={{
+                fontWeight: 700,
+              }}
+			    
         >
           What do we believe? 
         </Typography>
