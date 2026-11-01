@@ -122,6 +122,7 @@ export default function MinistryPageLayout4({
               mx: "auto",
               textAlign: "center",
               filter: "blur(30px)",
+              zIndex: 9999,
             }}
           >
 
