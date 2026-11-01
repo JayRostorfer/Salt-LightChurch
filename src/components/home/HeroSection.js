@@ -96,12 +96,12 @@ md: 10,
 },
 }}
 >
-{/* Overlay aux couleurs de Salt and Light */}
+{/* Overlay aux couleurs  */}
 <Box
 sx={{
 position: "absolute",
 inset: 0,
-backgroundColor:"rgba(0,0,0,0.6)",
+backgroundColor:"rgba(0,0,0,0.3)",
 zIndex: 1,
 }}
 />
