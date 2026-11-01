@@ -48,7 +48,7 @@ export default function MinistriesPreview2() {
           sx={{
             maxWidth: 700,
             mx: "auto",
-            mb: 8,
+            mb: 4,
             color: "whitesmoke",
           }}
         >
