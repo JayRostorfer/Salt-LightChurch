@@ -53,7 +53,7 @@ export default function MinistryCard({ ministry }) {
       />
 
       {/* CONTENT */}
-      <Box
+      
 <Box
   sx={{
     position: "absolute",
