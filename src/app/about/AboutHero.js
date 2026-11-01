@@ -34,6 +34,7 @@ export default function AboutHero() {
         sx={{
           position: "absolute",
           inset: 0,
+		 filter: "blur(110px)",
           background:
           "linear-gradient(115deg, #173447 0%, #24485A 50%, #9A7850 100%)",
 
