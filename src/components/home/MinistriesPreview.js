@@ -1,46 +1,140 @@
-"use client"
+"use client";
 
-import { Box, Container, Grid, Typography } from "@mui/material"
-import ministries from "@/data/ministries"
-import MinistryCard from "./MinistryCard"
+import { useLayoutEffect, useRef } from "react";
+
+import { Box, Container, Grid, Typography } from "@mui/material";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import ministries from "@/data/ministries";
+import MinistryCard from "./MinistryCard";
 
 export default function MinistriesPreview2() {
+  const sectionRef = useRef(null);
+  const titleRef = useRef(null);
+  const underlineRef = useRef(null);
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%",
+          once: true,
+        },
+      });
+
+      // Apparition du titre
+      tl.fromTo(
+        titleRef.current,
+        {
+          y: 45,
+          opacity: 0,
+          filter: "blur(8px)",
+        },
+        {
+          y: 0,
+          opacity: 1,
+          filter: "blur(0px)",
+          duration: 1,
+          ease: "power3.out",
+        }
+      );
+
+      // Dessin du soulignement
+      tl.fromTo(
+        underlineRef.current,
+        {
+          strokeDashoffset: 300,
+        },
+        {
+          strokeDashoffset: 0,
+          duration: 1.2,
+          ease: "power2.out",
+        },
+        "-=0.3"
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <Box
+      ref={sectionRef}
       sx={{
         py: 4,
         textAlign: "center",
-        background:
-            "linear-gradient(135deg, #173447, #9A7850)",
+        background: "linear-gradient(135deg, #173447, #9A7850)",
       }}
     >
       <Container
-  maxWidth="xl"
-  disableGutters
-  sx={{
-    pl: {
-      xs: 2,
-      md: 3,
-    },
-    pr: {
-      xs: 0,
-      md: 3,
-    },
-  }}
->
+        maxWidth="xl"
+        disableGutters
+        sx={{
+          pl: {
+            xs: 2,
+            md: 3,
+          },
+          pr: {
+            xs: 0,
+            md: 3,
+          },
+        }}
+      >
         {/* Titre */}
-        <Typography
-          variant="h3"
-          textAlign="center"
-              sx={{
-                color: "whitesmoke", 
-                fontWeight: 700,
-                mb: 3,
-                mt: 1,
-              }}
+        <Box
+          sx={{
+            position: "relative",
+            width: "fit-content",
+            mx: "auto",
+            mb: 3,
+            mt: 1,
+          }}
         >
-          Our Groups
-        </Typography>
+          <Typography
+            ref={titleRef}
+            variant="h3"
+            sx={{
+              color: "whitesmoke",
+              fontWeight: 700,
+              opacity: 0,
+            }}
+          >
+            Our Groups
+          </Typography>
+
+          {/* Soulignement ondulé */}
+          <Box
+            component="svg"
+            viewBox="0 0 300 20"
+            preserveAspectRatio="none"
+            sx={{
+              position: "absolute",
+              bottom: -9,
+              left: "50%",
+              transform: "translateX(-50%)",
+              width: "85%",
+              height: 14,
+              overflow: "visible",
+              pointerEvents: "none",
+            }}
+          >
+            <path
+              ref={underlineRef}
+              d="M 3 10 C 45 2, 65 17, 105 9 S 165 3, 205 10 S 265 15, 297 6"
+              fill="none"
+              stroke="#c49b63"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeDasharray="300"
+              strokeDashoffset="300"
+            />
+          </Box>
+        </Box>
 
         {/* Description */}
         <Typography
@@ -55,29 +149,20 @@ export default function MinistriesPreview2() {
           Different generations, one family, growing together in Christ.
         </Typography>
 
-        {/* ========================================= */}
         {/* MOBILE : CARTES HORIZONTALES SCROLLABLES */}
-        {/* ========================================= */}
         <Box
           sx={{
             display: {
               xs: "flex",
               md: "none",
             },
-
             gap: 2,
-
             overflowX: "auto",
             overflowY: "hidden",
-
             scrollSnapType: "x mandatory",
             WebkitOverflowScrolling: "touch",
-
-            
             px: 1,
             pb: 2,
-
-            
           }}
         >
           {ministries.map((ministry) => (
@@ -94,9 +179,7 @@ export default function MinistriesPreview2() {
           ))}
         </Box>
 
-        {/* ========================================= */}
         {/* DESKTOP LAYOUT */}
-        {/* ========================================= */}
         <Box
           sx={{
             display: {
@@ -106,7 +189,6 @@ export default function MinistriesPreview2() {
           }}
         >
           <Grid container spacing={4}>
-            {/* Les 3 premiers ministries */}
             {ministries.slice(0, 3).map((ministry) => (
               <Grid
                 key={ministry.slug}
@@ -116,10 +198,8 @@ export default function MinistriesPreview2() {
               </Grid>
             ))}
 
-            {/* Espace central */}
             <Grid size={{ xs: 0, md: 2 }} />
 
-            {/* Les ministries suivants */}
             {ministries.slice(3).map((ministry) => (
               <Grid
                 key={ministry.slug}
@@ -129,11 +209,10 @@ export default function MinistriesPreview2() {
               </Grid>
             ))}
 
-            {/* Espace final */}
             <Grid size={{ xs: 0, md: 2 }} />
           </Grid>
         </Box>
       </Container>
     </Box>
-  )
+  );
 }
