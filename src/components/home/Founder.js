@@ -100,6 +100,7 @@ export default function Founder() {
                 <Typography
                   variant="h5"
                   sx={{
+                    color:"#c49b63", 
                     fontWeight: 700,
                     mb: 1,
                   }}
