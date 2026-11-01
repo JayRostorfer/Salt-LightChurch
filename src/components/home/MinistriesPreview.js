@@ -33,7 +33,10 @@ export default function MinistriesPreview2() {
         },
       });
 
-      // Apparition du titre
+      // =========================
+      // TITLE ANIMATION
+      // =========================
+
       tl.fromTo(
         titleRef.current,
         {
@@ -50,7 +53,10 @@ export default function MinistriesPreview2() {
         }
       );
 
-      // Dessin du soulignement
+      // =========================
+      // HAND-DRAWN UNDERLINE
+      // =========================
+
       tl.fromTo(
         underlineRef.current,
         {
@@ -58,10 +64,10 @@ export default function MinistriesPreview2() {
         },
         {
           strokeDashoffset: 0,
-          duration: 1.4,
-          ease: "power2.inOut",
+          duration: 2.4,
+          ease: "sine.inOut",
         },
-        "-=0.3"
+        "-=0.2"
       );
 
     }, sectionRef);
@@ -75,7 +81,8 @@ export default function MinistriesPreview2() {
       sx={{
         py: 4,
         textAlign: "center",
-        background: "linear-gradient(135deg, #173447, #9A7850)",
+        background:
+          "linear-gradient(135deg, #173447, #9A7850)",
       }}
     >
       <Container
@@ -119,17 +126,18 @@ export default function MinistriesPreview2() {
           </Typography>
 
           {/* Hand-drawn underline */}
+
           <Box
             component="svg"
-            viewBox="0 0 300 55"
+            viewBox="0 0 300 40"
             preserveAspectRatio="none"
             sx={{
               position: "absolute",
-              bottom: -22,
+              bottom: -25,
               left: "50%",
               transform: "translateX(-50%)",
               width: "90%",
-              height: 32,
+              height: 30,
               overflow: "visible",
               pointerEvents: "none",
             }}
@@ -137,12 +145,11 @@ export default function MinistriesPreview2() {
             <path
               ref={underlineRef}
               d="
-                M 295 10
-                C 220 7, 100 3, 18 3
-                Q -2 3, 12 12
-                L 75 35
-                Q 90 42, 73 43
-                L 0 45
+                M 5 28
+                C 48 25, 76 17, 112 20
+                C 145 24, 164 15, 195 14
+                C 225 13, 253 19, 280 12
+                Q 290 10, 297 5
               "
               fill="none"
               stroke="#c49b63"
@@ -224,6 +231,7 @@ export default function MinistriesPreview2() {
           <Grid container spacing={4}>
 
             {/* First three ministries */}
+
             {ministries.slice(0, 3).map((ministry) => (
               <Grid
                 key={ministry.slug}
@@ -234,9 +242,11 @@ export default function MinistriesPreview2() {
             ))}
 
             {/* Center spacing */}
+
             <Grid size={{ xs: 0, md: 2 }} />
 
             {/* Remaining ministries */}
+
             {ministries.slice(3).map((ministry) => (
               <Grid
                 key={ministry.slug}
@@ -247,6 +257,7 @@ export default function MinistriesPreview2() {
             ))}
 
             {/* Final spacing */}
+
             <Grid size={{ xs: 0, md: 2 }} />
 
           </Grid>
