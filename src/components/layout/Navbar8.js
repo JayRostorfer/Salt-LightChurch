@@ -479,110 +479,26 @@ const navItemSx = {
                     onClick={() => setOpen(false)}
                     sx={navItemSx}
                   >
-                    <ListItemText primary="About" />
+                    <ListItemText primary="About us" />
                   </ListItemButton>
                 </ListItem>
               </motion.div>
 
-              {/* MINISTRIES ACCORDION */}
-              <motion.div variants={itemVariants}>
-                <Accordion
-                  disableGutters
-                  elevation={0}
-                  sx={{
-                    backgroundColor: "transparent",
-                    color: "white",
-
-                    "&:before": {
-                      display: "none"
-                    }
-                  }}
-                >
-                  <AccordionSummary
-                    expandIcon={
-                      <ExpandMoreIcon
-                        sx={{
-                          color: "white"
-                        }}
-                      />
-                    }
-                    sx={{
-                      borderRadius: "18px",
-
-                      px: 2,
-
-                      "&:hover": {
-          backgroundColor: "rgba(255,255,255,0.08)",
-          color: "#c49b63",
-        },
-
-                      transition: "all 0.4s ease"
-                    }}
+             <motion.div variants={itemVariants}>
+                <ListItem disablePadding>
+                  <ListItemButton
+                    component={Link}
+                    href="/groups"
+                    disableRipple
+                    onClick={() => setOpen(false)}
+                    sx={navItemSx}
                   >
-                    <Typography>
-                      Ministries
-                    </Typography>
-                  </AccordionSummary>
-
-                  <AccordionDetails
-                    sx={{
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: 1,
-                      pt: 0.5
-                    }}
-                  >
-                    {/* AROMA WOMEN */}
-                    <Box
-                      component={Link}
-                      href="/groups#aroma-women"
-                      onClick={() => setOpen(false)}
-                      sx={accordionLinkSx}
-                    >
-                      Aroma Women
-                    </Box>
-
-                    <Box
-                      component={Link}
-                      href="/groups#influence-men"
-                      onClick={() => setOpen(false)}
-                      sx={accordionLinkSx}
-                    >
-                     Influence Men
-                    </Box>
-
-                    {/* YOUNG ADULTS */}
-                    <Box
-                      component={Link}
-                      href="/groups#be-light"
-                      onClick={() => setOpen(false)}
-                      sx={accordionLinkSx}
-                    >
-                      Young Adults
-                    </Box>
-
-                    <Box
-                      component={Link}
-                      href="/groups#rocksalt"
-                      onClick={() => setOpen(false)}
-                      sx={accordionLinkSx}
-                    >
-                      Rocksalt Youth
-                    </Box>
-
-                    {/* KIDS */}
-                    <Box
-                      component={Link}
-                      href="/groups#blast-kids"
-                      onClick={() => setOpen(false)}
-                      sx={accordionLinkSx}
-                    >
-                      Kids
-                    </Box>
-                  </AccordionDetails>
-                </Accordion>
+                    <ListItemText primary="Groups" />
+                  </ListItemButton>
+                </ListItem>
               </motion.div>
 
+              
               {/* RESOURCES */}
               
 
