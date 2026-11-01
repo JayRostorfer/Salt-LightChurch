@@ -1,5 +1,6 @@
-"use client"
+"use client";
 
+import { useLayoutEffect, useRef } from "react";
 import { Poppins } from "next/font/google";
 
 import {
@@ -8,7 +9,10 @@ import {
   Grid,
   Typography,
   Paper,
-} from "@mui/material"
+} from "@mui/material";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -17,39 +21,127 @@ const poppins = Poppins({
 });
 
 export default function Founder() {
+  const sectionRef = useRef(null);
+  const headingRef = useRef(null);
+  const questionRef = useRef(null);
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ctx = gsap.context(() => {
+
+      // Animation du titre
+      const words = headingRef.current.querySelectorAll(".heading-word");
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%",
+          once: true,
+        },
+      });
+
+      tl.fromTo(
+        words,
+        {
+          y: 50,
+          opacity: 0,
+          filter: "blur(8px)",
+        },
+        {
+          y: 0,
+          opacity: 1,
+          filter: "blur(0px)",
+          duration: 1,
+          stagger: 0.25,
+          ease: "power3.out",
+        }
+      );
+
+      // Oscillation du point d'interrogation
+      gsap.to(questionRef.current, {
+        rotation: 18,
+        duration: 0.8,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+        transformOrigin: "center bottom",
+        delay: 1.2,
+      });
+
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <Box
+      ref={sectionRef}
       sx={{
         py: { xs: 8, md: 12 },
-        background: "linear-gradient(180deg, #020617 0%, #0f172a 50%, #111827 100%)",   
+        background:
+          "linear-gradient(180deg, #020617 0%, #0f172a 50%, #111827 100%)",
       }}
     >
       <Container maxWidth="lg">
         <Grid container spacing={6} alignItems="center">
-          
+
           {/* Foundation Overview */}
           <Grid size={{ xs: 12, md: 6 }}>
-            
 
+            {/* Animated Heading */}
             <Typography
+              ref={headingRef}
               variant="h3"
+              aria-label="Who we are?"
               sx={{
-                color:"whitesmoke", 
+                color: "whitesmoke",
                 fontWeight: 700,
                 mb: 3,
                 mt: 1,
+                overflow: "hidden",
               }}
             >
-              Who we are? 
+              <Box
+                component="span"
+                className="heading-word"
+                sx={{
+                  display: "inline-block",
+                }}
+              >
+                Who
+              </Box>
+
+              {" "}
+
+              <Box
+                component="span"
+                className="heading-word"
+                sx={{
+                  display: "inline-block",
+                }}
+              >
+                we are
+              </Box>
+
+              <Box
+                component="span"
+                ref={questionRef}
+                sx={{
+                  display: "inline-block",
+                  color: "#c49b63",
+                  ml: 0.5,
+                  transformOrigin: "center bottom",
+                }}
+              >
+                ?
+              </Box>
             </Typography>
 
-             <Typography
-              variant="overline"sx={{
-    py: { xs: 8, md: 12 },
-    bgcolor: "#0f172a",
-  }}
+            <Typography
+              variant="overline"
               sx={{
-                color: "primary.main",
+                color: "#c49b63",
                 fontWeight: 700,
                 letterSpacing: 2,
               }}
@@ -59,18 +151,21 @@ export default function Founder() {
 
             <Typography
               sx={{
+                fontFamily: poppins.style.fontFamily,
                 color: "whitesmoke",
                 lineHeight: 1.9,
                 mb: 2,
               }}
             >
-              We are a church family and part of the Assemblies of God. We are passionate about worship, guided by the Holy Spirit, and committed to living out the truth of God's Word every day. Our desire is to create a place where people feel loved, grow in their faith, discover their God-given purpose, and make a positive impact in the world around them.
+              We are a church family and part of the Assemblies of God.
+              We are passionate about worship, guided by the Holy Spirit,
+              and committed to living out the truth of God's Word every
+              day. Our desire is to create a place where people feel
+              loved, grow in their faith, discover their God-given
+              purpose, and make a positive impact in the world around
+              them.
             </Typography>
 
-           
-
-
-            
           </Grid>
 
           {/* Founders */}
@@ -78,11 +173,11 @@ export default function Founder() {
             <Paper
               elevation={0}
               sx={{
-    overflow: "hidden",
-    borderRadius: 4,
-    bgcolor: "#1e293b",
-    border: "1px solid rgba(255,255,255,0.08)",
-  }}
+                overflow: "hidden",
+                borderRadius: 4,
+                bgcolor: "#1e293b",
+                border: "1px solid rgba(255,255,255,0.08)",
+              }}
             >
               <Box
                 component="img"
@@ -100,7 +195,7 @@ export default function Founder() {
                 <Typography
                   variant="h5"
                   sx={{
-                    color:"#c49b63", 
+                    color: "#c49b63",
                     fontWeight: 700,
                     mb: 1,
                   }}
@@ -120,15 +215,22 @@ export default function Founder() {
                 </Typography>
 
                 <Typography
-                 variant="body1" 
-                 
+                  variant="body1"
                   sx={{
                     fontFamily: poppins.style.fontFamily,
                     color: "whitesmoke",
                     lineHeight: 1.8,
                   }}
                 >
-                  For more than 20 years, they have faithfully served as missionaries, sharing the love of Christ and helping people grow in their faith. Following God's call, they founded this church alongside the Assemblies of God with a desire to see lives transformed by the Gospel and people connected to a loving church family. Their passion for ministry, discipleship, and serving others continues to shape the heart and mission of our church today.
+                  For more than 20 years, they have faithfully served
+                  as missionaries, sharing the love of Christ and
+                  helping people grow in their faith. Following God's
+                  call, they founded this church alongside the
+                  Assemblies of God with a desire to see lives
+                  transformed by the Gospel and people connected to
+                  a loving church family. Their passion for ministry,
+                  discipleship, and serving others continues to shape
+                  the heart and mission of our church today.
                 </Typography>
               </Box>
             </Paper>
@@ -137,5 +239,5 @@ export default function Founder() {
         </Grid>
       </Container>
     </Box>
-  )
+  );
 }
