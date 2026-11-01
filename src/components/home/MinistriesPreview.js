@@ -8,7 +8,7 @@ export default function MinistriesPreview2() {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 4,
         textAlign: "center",
         background:
             "linear-gradient(135deg, #173447, #9A7850)",
