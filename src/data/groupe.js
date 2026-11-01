@@ -2,7 +2,7 @@ const groupes = [
   {
     slug: "blast-kids",
     title: "Blast Kids",
-    img: "/images/kids1.jpg",
+    img: "/images/blast-kids1.jpg",
     descri:
       "Blast Kids is a joyful and welcoming community where children discover God's love through Bible stories, worship, games, and meaningful friendships. We create a safe and fun environment where every child can grow in faith and feel loved.",
   },
@@ -18,7 +18,7 @@ const groupes = [
   {
     slug: "be-light",
     title: "Be Light",
-    img: "/images/belight1.jpg",
+    img: "/images/be-light-karting.jpg",
     descri:
       "Be Light brings young adults together to build meaningful relationships, grow spiritually, and encourage one another through life's journey. It's a community where faith becomes part of everyday life.",
   },
