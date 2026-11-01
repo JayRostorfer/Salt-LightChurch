@@ -21,11 +21,17 @@ export default function LatestService() {
         background:
           "linear-gradient(-115deg, #9A7850 0%, #173447 100%)",
 
-        py: {
-          xs: 10,
-          sm: 12,
-          md: 16,
-        },
+        pt: {
+  xs: 14,
+  sm: 16,
+  md: 20,
+},
+
+pb: {
+  xs: 14,
+  sm: 16,
+  md: 20,
+},
       }}
     >
       {/* DECORATIVE GLOW */}
