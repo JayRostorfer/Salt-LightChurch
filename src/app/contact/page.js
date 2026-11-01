@@ -90,7 +90,7 @@ export default function ContactHero() {
         },
 
         background:
-          "linear-gradient(135deg, #0f172a 0%, #173447 100%)",
+          "linear-gradient(135deg, #0f172a 0%, #142F40 100%)",
 
         display: "flex",
         alignItems: "center",
