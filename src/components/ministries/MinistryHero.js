@@ -23,6 +23,7 @@ justifyContent: "center",
 overflow: "hidden",
 }}
 >
+{/* Background Swiper */}
 <Swiper
 modules={[Autoplay, EffectFade]}
 effect="fade"
@@ -55,24 +56,24 @@ objectFit: "cover",
 ))}
 </Swiper>
 
-  {/* Overlay */}
+  {/* Dark Overlay */}
   <Box
     sx={{
       position: "absolute",
       inset: 0,
       background:
-        "linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3))",
+        "linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.25))",
       zIndex: 1,
     }}
   />
 
+  {/* Watermark Title */}
   <Container
     maxWidth="lg"
     sx={{
       position: "relative",
       zIndex: 2,
       color: "white",
-      textAlign: "left",
       pb: {
         xs: 5,
         md: 8,
@@ -83,10 +84,22 @@ objectFit: "cover",
       variant="h1"
       fontWeight="bold"
       sx={{
+        textAlign: "center",
+        textTransform: "uppercase",
+        whiteSpace: "nowrap",
+        opacity: 0.18,
         fontSize: {
-          xs: "2.5rem",
-          md: "5rem",
+          xs: "2.8rem",
+          sm: "4.5rem",
+          md: "7rem",
+          lg: "9rem",
         },
+        letterSpacing: {
+          xs: "2px",
+          md: "8px",
+        },
+        lineHeight: 1,
+        userSelect: "none",
       }}
     >
       Salt and Light
