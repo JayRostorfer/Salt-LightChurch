@@ -1,4 +1,3 @@
-
 "use client";
 
 import groupes from "@/data/groupe";
@@ -18,15 +17,65 @@ import MinistryHero from "./MinistryHero";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function MinistryPageLayout4({
-  ministry
-}) {
+export default function MinistryPageLayout4({ ministry }) {
   const pageRef = useRef(null);
+
+  const introRef = useRef(null);
+  const endingRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
 
-      // EACH MINISTRY SECTION
+      // =================================
+      // GENERAL INTRODUCTION
+      // =================================
+
+      const intro = introRef.current;
+
+      const introLabel = intro.querySelector(".intro-label");
+      const introTitle = intro.querySelector(".intro-title");
+      const introHighlight = intro.querySelector(".intro-highlight");
+
+      const introTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: intro,
+          start: "top 75%",
+          once: true,
+        },
+      });
+
+      introTimeline
+        .from(introLabel, {
+          y: 25,
+          opacity: 0,
+          duration: 0.9,
+          ease: "power3.out",
+        })
+        .from(
+          introTitle,
+          {
+            y: 55,
+            opacity: 0,
+            duration: 1.1,
+            ease: "power3.out",
+          },
+          "-=0.45"
+        )
+        .from(
+          introHighlight,
+          {
+            y: 30,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out",
+          },
+          "-=0.7"
+        );
+
+
+      // =================================
+      // MINISTRIES SECTIONS
+      // =================================
 
       gsap.utils
         .toArray(".ministry-section")
@@ -73,10 +122,52 @@ export default function MinistryPageLayout4({
 
         });
 
+
+      // =================================
+      // ENDING SECTION
+      // =================================
+
+      const ending = endingRef.current;
+
+      const endingLabel = ending.querySelector(
+        ".ending-label"
+      );
+
+      const endingTitle = ending.querySelector(
+        ".ending-title"
+      );
+
+      const endingTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: ending,
+          start: "top 75%",
+          once: true,
+        },
+      });
+
+      endingTimeline
+        .from(endingLabel, {
+          y: 25,
+          opacity: 0,
+          duration: 0.9,
+          ease: "power3.out",
+        })
+        .from(
+          endingTitle,
+          {
+            y: 55,
+            opacity: 0,
+            duration: 1.2,
+            ease: "power3.out",
+          },
+          "-=0.4"
+        );
+
     }, pageRef);
 
     return () => ctx.revert();
-  }, [groupes]);
+
+  }, []);
 
   return (
     <Box
@@ -91,7 +182,7 @@ export default function MinistryPageLayout4({
           HERO
       ================================= */}
 
-      <MinistryHero  />
+      <MinistryHero />
 
 
       {/* =================================
@@ -99,6 +190,7 @@ export default function MinistryPageLayout4({
       ================================= */}
 
       <Box
+        ref={introRef}
         className="intro-section"
         sx={{
           position: "relative",
@@ -107,14 +199,13 @@ export default function MinistryPageLayout4({
             xs: 12,
             md: 20,
           },
-          
 
           background:
-          "linear-gradient(115deg, #173447 0%, #24485A 50%, #9A7850 100%)",
-			backdropFilter: "blur(30px)",
-    WebkitBackdropFilter: "blur(30px)",
-          
-     }}
+            "linear-gradient(115deg, #173447 0%, #24485A 50%, #9A7850 100%)",
+
+          backdropFilter: "blur(30px)",
+          WebkitBackdropFilter: "blur(30px)",
+        }}
       >
         <Container maxWidth="lg">
 
@@ -123,13 +214,15 @@ export default function MinistryPageLayout4({
               maxWidth: 900,
               mx: "auto",
               textAlign: "center",
-              zIndex: 9999,
+              position: "relative",
+              zIndex: 2,
             }}
           >
 
             {/* SMALL LABEL */}
 
             <Typography
+              className="intro-label"
               sx={{
                 color: "#c49b63",
                 letterSpacing: "4px",
@@ -145,6 +238,7 @@ export default function MinistryPageLayout4({
             {/* MAIN TITLE */}
 
             <Typography
+              className="intro-title"
               component="h2"
               sx={{
                 fontSize: {
@@ -167,19 +261,15 @@ export default function MinistryPageLayout4({
 
               <Box
                 component="span"
+                className="intro-highlight"
                 sx={{
+                  display: "inline-block",
                   color: "#173447",
                 }}
               >
                 For Everyone.
               </Box>
             </Typography>
-
-
-            
-
-
-            
 
           </Box>
 
@@ -215,7 +305,6 @@ export default function MinistryPageLayout4({
             }}
           >
 
-
             <Typography
               component="h2"
               sx={{
@@ -225,9 +314,7 @@ export default function MinistryPageLayout4({
                 },
 
                 fontWeight: 800,
-
                 lineHeight: 1.1,
-
                 color: "white",
               }}
             >
@@ -259,28 +346,29 @@ export default function MinistryPageLayout4({
         const reverse = index % 2 !== 0;
 
         return (
-           <Box
-        id={groupe.slug}
-      key={groupe.slug || index}
-      className="ministry-section"
-      sx={{
-        position: "relative",
+          <Box
+            id={groupe.slug}
+            key={groupe.slug || index}
+            className="ministry-section"
+            sx={{
+              position: "relative",
 
-        background: "#173447",
+              background: "#173447",
 
-        py: {
-          xs: 8,
-          md: 15,
-        },
+              py: {
+                xs: 8,
+                md: 15,
+              },
 
-        mb: {
-          xs: 10,
-          md: 0,
-        },
+              mb: {
+                xs: 10,
+                md: 0,
+              },
 
-        overflow: "hidden",
-      }}
-    >
+              overflow: "hidden",
+            }}
+          >
+
             {/* BACKGROUND TITLE */}
 
             <Typography
@@ -289,17 +377,16 @@ export default function MinistryPageLayout4({
                 position: "absolute",
 
                 display: {
-                  xs: "block", 
-                  md: "none", 
-                }, 
+                  xs: "block",
+                  md: "none",
+                },
 
                 top: {
                   xs: 30,
                   md: -30,
                 },
 
-                
-                left:  "3%",
+                left: "3%",
 
                 fontSize: {
                   xs: "5rem",
@@ -307,7 +394,6 @@ export default function MinistryPageLayout4({
                 },
 
                 fontWeight: 900,
-
                 lineHeight: 1,
 
                 color: "rgba(255,255,255,0.025)",
@@ -326,31 +412,29 @@ export default function MinistryPageLayout4({
                 zIndex: 2,
               }}
             >
-              
 
-        {/* MOBILE TITLE */}
+              {/* MOBILE TITLE */}
 
-<Typography
-  component="h3"
-  sx={{
-    display: {
-      xs: "block",
-      md: "none",
-    },
+              <Typography
+                component="h3"
+                sx={{
+                  display: {
+                    xs: "block",
+                    md: "none",
+                  },
 
-    fontSize: "2.5rem",
-    fontWeight: 800,
-    lineHeight: 1.15,
-    color: "white",
+                  fontSize: "2.5rem",
+                  fontWeight: 800,
+                  lineHeight: 1.15,
+                  color: "white",
 
-    mb: 5,
+                  mb: 5,
+                  textAlign: "left",
+                }}
+              >
+                {groupe.title}
+              </Typography>
 
-    textAlign: "left",
-  }}
->
-  {groupe.title}
-</Typography>
-                    
 
               <Grid
                 container
@@ -368,8 +452,6 @@ export default function MinistryPageLayout4({
                     : "row",
                 }}
               >
-
-              
 
                 {/* IMAGE */}
 
@@ -462,27 +544,28 @@ export default function MinistryPageLayout4({
                     }}
                   >
 
-                  {/* DESKTOP TITLE */}
+                    {/* DESKTOP TITLE */}
 
-<Typography
-  component="h3"
-  sx={{
-    display: {
-      xs: "none",
-      md: "block",
-    },
+                    <Typography
+                      component="h3"
+                      sx={{
+                        display: {
+                          xs: "none",
+                          md: "block",
+                        },
 
-    fontSize: "4rem",
-    fontWeight: 800,
-    lineHeight: 1.15,
-    color: "white",
+                        fontSize: "4rem",
+                        fontWeight: 800,
+                        lineHeight: 1.15,
+                        color: "white",
 
-    mb: 4,
-  }}
->
-  {groupe.title}
-</Typography>
-                  
+                        mb: 4,
+                      }}
+                    >
+                      {groupe.title}
+                    </Typography>
+
+
                     {/* GROUP DESCRIPTION */}
 
                     <Typography
@@ -503,21 +586,25 @@ export default function MinistryPageLayout4({
                       {groupe.descri}
                     </Typography>
 
-                     <Box
+
+                    {/* MOBILE DIVIDER */}
+
+                    <Box
                       sx={{
                         width: 70,
                         height: 3,
                         mx: "auto",
+
                         display: {
-                          xs: "block", 
-                          md: "none", 
-                        }, 
+                          xs: "block",
+                          md: "none",
+                        },
 
                         background: "#c49b63",
 
                         mt: 4,
                       }}
-                    /> 
+                    />
 
                   </Box>
 
@@ -537,7 +624,11 @@ export default function MinistryPageLayout4({
       ================================= */}
 
       <Box
+        ref={endingRef}
+        className="ending-section"
         sx={{
+          position: "relative",
+
           background:
             "linear-gradient(135deg, #173447, #9A7850)",
 
@@ -547,11 +638,16 @@ export default function MinistryPageLayout4({
           },
 
           textAlign: "center",
+
+          overflow: "hidden",
         }}
       >
         <Container maxWidth="md">
 
+          {/* SMALL LABEL */}
+
           <Typography
+            className="ending-label"
             sx={{
               color: "#F5D7A8",
               letterSpacing: "4px",
@@ -564,7 +660,10 @@ export default function MinistryPageLayout4({
           </Typography>
 
 
+          {/* MAIN TITLE */}
+
           <Typography
+            className="ending-title"
             component="h2"
             sx={{
               fontSize: {
@@ -583,9 +682,6 @@ export default function MinistryPageLayout4({
           >
             You Matter Here.
           </Typography>
-
-
-          
 
         </Container>
       </Box>
