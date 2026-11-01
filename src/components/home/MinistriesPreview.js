@@ -52,7 +52,7 @@ export default function MinistriesPreview2() {
         },
         {
           strokeDashoffset: 0,
-          duration: 0.5,
+          duration: 0.8,
           ease: "power2.out",
         },
         "-=0.3"
@@ -99,6 +99,7 @@ export default function MinistriesPreview2() {
             ref={titleRef}
             variant="h3"
             sx={{
+              marginBottom: "15px",
               color: "whitesmoke",
               fontWeight: 700,
               opacity: 0,
@@ -113,13 +114,12 @@ export default function MinistriesPreview2() {
             viewBox="0 0 300 20"
             preserveAspectRatio="none"
             sx={{
-              mt: 4,
               position: "absolute",
               bottom: -9,
               left: "50%",
               transform: "translateX(-50%)",
               width: "85%",
-              height: 25,
+              height: 30,
               overflow: "visible",
               pointerEvents: "none",
             }}
