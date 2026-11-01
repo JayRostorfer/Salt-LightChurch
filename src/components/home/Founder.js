@@ -119,8 +119,9 @@ export default function Founder() {
 
                 <Typography
                  variant="body1" 
-                 className={poppins.className}
+                 
                   sx={{
+                    fontFamily: poppins.style.fontFamily,
                     color: "whitesmoke",
                     lineHeight: 1.8,
                   }}
