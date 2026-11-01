@@ -107,6 +107,7 @@ export default function MinistryPageLayout4({
             xs: 12,
             md: 20,
           },
+          filter: "blur(30px)",
 
           background:
           "linear-gradient(115deg, #173447 0%, #24485A 50%, #9A7850 100%)",
@@ -126,7 +127,7 @@ export default function MinistryPageLayout4({
 
             <Typography
               sx={{
-                color: "#173447",
+                color: "#c49b63",
                 letterSpacing: "4px",
                 fontSize: "0.8rem",
                 fontWeight: 700,
