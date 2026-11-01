@@ -54,23 +54,29 @@ export default function MinistryCard({ ministry }) {
 
       {/* CONTENT */}
       <Box
-        sx={{
-          position: "absolute",
-          inset: 0,
+<Box
+  sx={{
+    position: "absolute",
+    inset: 0,
 
-          display: "flex",
-          flexDirection: "column",
+    display: "flex",
+    flexDirection: "column",
 
-          alignItems: "center",
-          justifyContent: "center",
+    alignItems: "center",
+    justifyContent: "flex-end",
 
-          gap: 2,
+    gap: 2,
 
-          textAlign: "center",
-          color: "white",
+    textAlign: "center",
+    color: "white",
 
-          px: 3,
-        }}
+    px: 3,
+    pb: {
+      xs: 5,
+      md: 6,
+    },
+  }}
+>
       >
         <Typography
           variant="h4"
