@@ -1,5 +1,7 @@
 "use client"
 
+import { Roboto } from "next/font/google";
+
 import {
   Box,
   Container,
@@ -7,6 +9,12 @@ import {
   Typography,
   Paper,
 } from "@mui/material"
+
+const roboto = Roboto({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function Founder() {
   return (
@@ -110,6 +118,8 @@ export default function Founder() {
                 </Typography>
 
                 <Typography
+                 variant="body1" 
+                 className={roboto.className}
                   sx={{
                     color: "whitesmoke",
                     lineHeight: 1.8,
