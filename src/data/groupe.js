@@ -34,7 +34,7 @@ const groupes = [
   {
     slug: "influence-men",
     title: "Influence Men",
-    img: "/images/influence1.jpg",
+    img: "/images/influence-men1.jpg",
     descri:
       "Influence Men is a brotherhood where men encourage one another to grow in faith, strengthen their families, and live with integrity and purpose. Through fellowship and meaningful conversations, we build relationships rooted in Christ.",
   },
