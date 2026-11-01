@@ -2,12 +2,7 @@
 
 import { useLayoutEffect, useRef } from "react";
 
-import {
-  Box,
-  Container,
-  Grid,
-  Typography,
-} from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -24,7 +19,6 @@ export default function MinistriesPreview2() {
     gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
-
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -33,10 +27,7 @@ export default function MinistriesPreview2() {
         },
       });
 
-      // =========================
-      // TITLE ANIMATION
-      // =========================
-
+      // Apparition du titre
       tl.fromTo(
         titleRef.current,
         {
@@ -53,23 +44,19 @@ export default function MinistriesPreview2() {
         }
       );
 
-      // =========================
-      // HAND-DRAWN UNDERLINE
-      // =========================
-
+      // Dessin du soulignement
       tl.fromTo(
         underlineRef.current,
         {
-          strokeDashoffset: 1,
+          strokeDashoffset: 300,
         },
         {
           strokeDashoffset: 0,
-          duration: 2.4,
-          ease: "sine.inOut",
+          duration: 0.5,
+          ease: "power2.out",
         },
-        "-=0.2"
+        "-=0.3"
       );
-
     }, sectionRef);
 
     return () => ctx.revert();
@@ -81,8 +68,7 @@ export default function MinistriesPreview2() {
       sx={{
         py: 4,
         textAlign: "center",
-        background:
-          "linear-gradient(135deg, #173447, #9A7850)",
+        background: "linear-gradient(135deg, #173447, #9A7850)",
       }}
     >
       <Container
@@ -99,17 +85,13 @@ export default function MinistriesPreview2() {
           },
         }}
       >
-
-        {/* ========================= */}
-        {/* TITLE */}
-        {/* ========================= */}
-
+        {/* Titre */}
         <Box
           sx={{
             position: "relative",
             width: "fit-content",
             mx: "auto",
-            mb: 5,
+            mb: 3,
             mt: 1,
           }}
         >
@@ -125,48 +107,37 @@ export default function MinistriesPreview2() {
             Our Groups
           </Typography>
 
-          {/* Hand-drawn underline */}
-
+          {/* Soulignement ondulé */}
           <Box
             component="svg"
-            viewBox="0 0 300 40"
+            viewBox="0 0 300 20"
             preserveAspectRatio="none"
             sx={{
+              mt: 4,
               position: "absolute",
-              bottom: -25,
+              bottom: -9,
               left: "50%",
               transform: "translateX(-50%)",
-              width: "90%",
-              height: 30,
+              width: "85%",
+              height: 25,
               overflow: "visible",
               pointerEvents: "none",
             }}
           >
             <path
               ref={underlineRef}
-              d="
-                M 5 28
-                C 48 25, 76 17, 112 20
-                C 145 24, 164 15, 195 14
-                C 225 13, 253 19, 280 12
-                Q 290 10, 297 5
-              "
+              d="M 3 10 C 45 2, 65 17, 105 9 S 165 3, 205 10 S 265 15, 297 6"
               fill="none"
               stroke="#c49b63"
-              strokeWidth="7"
+              strokeWidth="3"
               strokeLinecap="round"
-              strokeLinejoin="round"
-              pathLength="1"
-              strokeDasharray="1"
-              strokeDashoffset="1"
+              strokeDasharray="300"
+              strokeDashoffset="300"
             />
           </Box>
         </Box>
 
-        {/* ========================= */}
-        {/* DESCRIPTION */}
-        {/* ========================= */}
-
+        {/* Description */}
         <Typography
           textAlign="center"
           sx={{
@@ -179,25 +150,18 @@ export default function MinistriesPreview2() {
           Different generations, one family, growing together in Christ.
         </Typography>
 
-        {/* ========================= */}
-        {/* MOBILE CAROUSEL */}
-        {/* ========================= */}
-
+        {/* MOBILE : CARTES HORIZONTALES SCROLLABLES */}
         <Box
           sx={{
             display: {
               xs: "flex",
               md: "none",
             },
-
             gap: 2,
-
             overflowX: "auto",
             overflowY: "hidden",
-
             scrollSnapType: "x mandatory",
             WebkitOverflowScrolling: "touch",
-
             px: 1,
             pb: 2,
           }}
@@ -216,10 +180,7 @@ export default function MinistriesPreview2() {
           ))}
         </Box>
 
-        {/* ========================= */}
         {/* DESKTOP LAYOUT */}
-        {/* ========================= */}
-
         <Box
           sx={{
             display: {
@@ -229,9 +190,6 @@ export default function MinistriesPreview2() {
           }}
         >
           <Grid container spacing={4}>
-
-            {/* First three ministries */}
-
             {ministries.slice(0, 3).map((ministry) => (
               <Grid
                 key={ministry.slug}
@@ -241,11 +199,7 @@ export default function MinistriesPreview2() {
               </Grid>
             ))}
 
-            {/* Center spacing */}
-
             <Grid size={{ xs: 0, md: 2 }} />
-
-            {/* Remaining ministries */}
 
             {ministries.slice(3).map((ministry) => (
               <Grid
@@ -256,13 +210,9 @@ export default function MinistriesPreview2() {
               </Grid>
             ))}
 
-            {/* Final spacing */}
-
             <Grid size={{ xs: 0, md: 2 }} />
-
           </Grid>
         </Box>
-
       </Container>
     </Box>
   );
