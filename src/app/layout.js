@@ -17,7 +17,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html className={poppins.variable}> lang="en">
+    <html className={poppins.variable} lang="en">
       <body>
        <ThemeProvider theme={theme}>
           <CssBaseline />
