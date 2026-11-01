@@ -201,7 +201,7 @@ zIndex: 1,
 
     letterSpacing: "0.015em",
 
-    color: "#ffffff",
+    color: "#f8dfb5",
 
     maxWidth: "750px",
 
