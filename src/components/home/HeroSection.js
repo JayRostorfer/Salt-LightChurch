@@ -101,7 +101,7 @@ md: 10,
 sx={{
 position: "absolute",
 inset: 0,
-backgroundColor:"rgba(0,0,0,0.45)",
+backgroundColor:"rgba(0,0,0,0.5)",
 zIndex: 1,
 }}
 />
@@ -157,7 +157,7 @@ zIndex: 1,
         },
         lineHeight: 1.8,
         textTransform: "uppercase",
-        color: "#c49b63",
+        color: "whitesmoke",
         mb: {
           xs: 4,
           md: 5,
@@ -232,7 +232,7 @@ zIndex: 1,
 
     letterSpacing: "0.15em",
 
-    color: "#c49b63",
+    color: "#f8dfb5",
 
     mt: 3,
   }}
