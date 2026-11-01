@@ -77,7 +77,7 @@ export default function MinistryCard({ ministry }) {
     },
   }}
 >
-      >
+      
         <Typography
           variant="h4"
           sx={{
