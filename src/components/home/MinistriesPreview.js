@@ -115,7 +115,7 @@ export default function MinistriesPreview2() {
             preserveAspectRatio="none"
             sx={{
               position: "absolute",
-              bottom: -18,
+              bottom: -36,
               left: "50%",
               transform: "translateX(-50%)",
               width: "85%",
