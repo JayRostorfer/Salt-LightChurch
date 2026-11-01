@@ -209,116 +209,55 @@ const navItemSx = {
                   About
                 </Button>
               </Link> 
-              
-               <Button
-  onClick={handleMenuOpen}
-  sx={{
-    color: "white",
-    position: "relative",
-    fontWeight: 500,
-    "&:hover": {
-      transform: "scale(1.08)",
-      transition: "all 0.4s ease",
-    },
-  }}
->
-  Ministries
-</Button>
 
-  <Menu
-  anchorEl={anchorEl}
-  open={menuopen}
-  onClose={handleMenuClose}
-  keepMounted
-  disableScrollLock
-  sx={{
-    "& .MuiPopover-root": {
-      zIndex: 2000,
-    },
-  }}
-  slotProps={{
-    root: {
-      sx: {
-        zIndex: 2000,
-      },
-    },
-  paper: {
-    elevation: 0,
-    sx: {
+                    
+<Link
+                href="/groups"
+                style={{
+                  textDecoration: "none"
+                }}
+              >
+                <Button
+                  sx={{
+                    color: "white",
+                    position: "relative",
+                    fontWeight: 500,
+                    "&:hover": {
+                      transform: "scale(1.08)",
+                      transition: "all 0.4s ease"
+                    },
+                    "&:hover::after": {
+                      width: "100%"
+                    }
+                  }}
+                >
+                  Groups
+                </Button>
+              </Link> 
 
-      background:
-        "linear-gradient(180deg, #0f172a 0%, #111827 100%)",
-
-      color: "#fff",
-
-      border: "1px solid rgba(255,255,255,0.08)",
-
-      borderRadius: "18px",
-
-      overflow: "hidden",
-
-      boxShadow:
-        "0 20px 50px rgba(0,0,0,0.6)",
-
-      backdropFilter: "blur(20px)",
-
-      "& .MuiMenuItem-root": {
-        py: 1.5,
-        px: 2.5,
-
-        transition: "all 0.3s ease",
-
-        "&:hover": {
-          backgroundColor: "rgba(255,255,255,0.08)",
-          color: "#c49b63",
-        },
-      },
-    },
-  },
-
-  }}
->
-  <MenuItem
-    component={Link}
-    href="/groups"
-    onClick={handleMenuClose}
-  >
-    Aroma Women
-  </MenuItem>
-
-  <MenuItem
-    component={Link}
-    href="/groups"
-    onClick={handleMenuClose}
-  >
-    Influence Men
-  </MenuItem>
-
-  <MenuItem
-    component={Link}
-    href="/groups"
-    onClick={handleMenuClose}
-  >
-    Young Adults
-  </MenuItem>
-
-  <MenuItem
-    component={Link}
-    href="/groups"
-    onClick={handleMenuClose}
-  >
-    Rocksalt Youth
-  </MenuItem>
-      
-  <MenuItem
-    component={Link}
-    href="/groups"
-    onClick={handleMenuClose}
-  >
-    Blast Kids
-  </MenuItem>
-</Menu>
-              
+                    <Link
+                href="/resources"
+                style={{
+                  textDecoration: "none"
+                }}
+              >
+                <Button
+                  sx={{
+                    color: "white",
+                    position: "relative",
+                    fontWeight: 500,
+                    "&:hover": {
+                      transform: "scale(1.08)",
+                      transition: "all 0.4s ease"
+                    },
+                    "&:hover::after": {
+                      width: "100%"
+                    }
+                  }}
+                >
+                Resources
+                </Button>
+              </Link> 
                   
 
             <Button
