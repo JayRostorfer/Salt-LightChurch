@@ -148,13 +148,7 @@ zIndex: 1,
     <Typography
       component="p"
       className="hero-church"
-      sx={{
-        fontFamily: "inherit",
-        fontSize: {
-          xs: "0.68rem",
-          sm: "0.8rem",
-          md: "0.95rem",
-        },
+      sx={{     
         fontWeight: 500,
         letterSpacing: {
           xs: "0.12em",
@@ -196,14 +190,7 @@ zIndex: 1,
   component="p"
   className="hero-verse"
   sx={{
-    fontFamily: lora.style.fontFamily,
-
-    fontSize: {
-      xs: "1.15rem",
-      sm: "1.45rem",
-      md: "1.9rem",
-    },
-
+    
     fontWeight: 400,
     fontStyle: "normal",
 
