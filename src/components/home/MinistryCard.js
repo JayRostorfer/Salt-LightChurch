@@ -93,7 +93,7 @@ export default function MinistryCard({ ministry }) {
 
         <Button
           component={Link}
-          href={`/ministries#${ministry.slug}`}
+          href={`/groups#${ministry.slug}`}
           variant="contained"
           sx={{
             backgroundColor: "#c49b63",
