@@ -61,7 +61,7 @@ export default function BottomNav() {
       left: "100%",
     }}
     >
-      Welcome to Salt & Light Church • Sunday Worship 9:00 AM • Everyone is
+      Welcome to Salt & Light Church • Sunday Worship 9:30 AM • Everyone is
       welcome!
     </Typography>
   </Box>
