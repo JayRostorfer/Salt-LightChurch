@@ -101,9 +101,7 @@ export default function MinistryPageLayout4({
       <Box
         className="intro-section"
         sx={{
-          position: "absolute",
-          inset: 0,
-		 
+          position: "relative",
 
           py: {
             xs: 12,
@@ -113,9 +111,9 @@ export default function MinistryPageLayout4({
 
           background:
           "linear-gradient(115deg, #173447 0%, #24485A 50%, #9A7850 100%)",
-
-          filter: "blur(30px)",
-          zIndex: 1,
+			backdropFilter: "blur(30px)",
+    WebkitBackdropFilter: "blur(30px)",
+          
      }}
       >
         <Container maxWidth="lg">
@@ -125,7 +123,7 @@ export default function MinistryPageLayout4({
               maxWidth: 900,
               mx: "auto",
               textAlign: "center",
-              zIndex: 2,
+              zIndex: 9999,
             }}
           >
 
