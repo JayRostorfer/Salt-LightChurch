@@ -8,7 +8,10 @@ export default function MinistryCard({ ministry }) {
     <Box
       sx={{
         position: "relative",
-        height: 420,
+        height: {
+          xs: 350,
+          md: 450,
+        }, 
         overflow: "hidden",
         borderRadius: "24px",
         cursor: "pointer",
