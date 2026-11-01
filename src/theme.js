@@ -1,13 +1,14 @@
 "use client";
 
-import { createTheme } from "@mui/material/styles";
+import {
+  createTheme,
+  responsiveFontSizes,
+} from "@mui/material/styles";
 
-const theme = createTheme({
+let theme = createTheme({
   typography: {
-    
     fontFamily: "var(--font-poppins)",
 
-    // Paragraphes
     body1: {
       fontSize: "1rem",
       fontWeight: 400,
@@ -20,7 +21,6 @@ const theme = createTheme({
       lineHeight: 1.7,
     },
 
-    // Sous-titres
     subtitle1: {
       fontSize: "1.125rem",
       fontWeight: 500,
@@ -31,6 +31,18 @@ const theme = createTheme({
       fontWeight: 500,
     },
   },
+});
+
+// Responsive typography
+theme = responsiveFontSizes(theme, {
+  breakpoints: ["sm", "md", "lg"],
+  factor: 2,
+  variants: [
+    "body1",
+    "body2",
+    "subtitle1",
+    "subtitle2",
+  ],
 });
 
 export default theme;
