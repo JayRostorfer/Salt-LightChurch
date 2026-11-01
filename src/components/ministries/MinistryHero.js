@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import images from "@/data/ImageSwiperData";
 import { Box, Container, Typography } from "@mui/material";
@@ -55,13 +55,13 @@ objectFit: "cover",
 ))}
 </Swiper>
 
-  {/* Dark Overlay */}
+  {/* Overlay */}
   <Box
     sx={{
       position: "absolute",
       inset: 0,
       background:
-        "linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.15))",
+        "linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3))",
       zIndex: 1,
     }}
   />
@@ -87,7 +87,6 @@ objectFit: "cover",
           xs: "2.5rem",
           md: "5rem",
         },
-        letterSpacing: "-1px",
       }}
     >
       Salt and Light
