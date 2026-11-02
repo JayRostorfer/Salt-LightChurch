@@ -186,7 +186,7 @@ pb: {
 
               <Button
                 component={Link}
-                href: "https://www.youtube.com/@SALTandLIGHTChurchMadagascar", 
+                href:"https://www.youtube.com/@SALTandLIGHTChurchMadagascar"
                 variant="contained"
                 sx={{
                   background: "#fff",
