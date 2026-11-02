@@ -70,7 +70,7 @@ export default function ContactHero() {
             duration: 1,
             ease: "power3.out",
           },
-          "-=0.7"
+          "-=1.0"
         );
     }, sectionRef);
 
