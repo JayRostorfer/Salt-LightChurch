@@ -279,7 +279,7 @@ const navItemSx = {
                 transition: "all 0.4s ease"
               }}
             >
-              Get in touch
+              Reach out
             </Button>
           </Box>
 
