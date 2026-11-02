@@ -151,13 +151,7 @@ export default function WhatWeValue() {
               spacing={1.5}
               sx={{ mb: 3 }}
             >
-              <Box
-                sx={{
-                  width: 32,
-                  height: "1px",
-                  bgcolor: colors.accent,
-                }}
-              />
+              
 
               <Typography
                 sx={{
@@ -168,7 +162,7 @@ export default function WhatWeValue() {
                   textTransform: "uppercase",
                 }}
               >
-                Our Foundation
+                
               </Typography>
             </Stack>
 
@@ -226,7 +220,7 @@ export default function WhatWeValue() {
                     fontStyle: "italic",
                   }}
                 >
-                  value.
+                  value? 
                 </Box>
               </Typography>
             </Box>
