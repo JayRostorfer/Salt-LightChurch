@@ -1,4 +1,10 @@
 const images = [
+    {
+    id: 0,
+    src: "/images/home-cov-pic.jpg",
+    alt: "",
+    
+  },
   {
     id: 1,
     src: "/images/rocksalt1.jpg",
