@@ -307,7 +307,7 @@ pb: {
               >
                 <Box
                   component="iframe"
-                  src="https://youtu.be/qTlF3MmzOBY?si=ZXslC2Rbi5QYxHaN"
+                  src="https://www.youtube.com/embed/qTlF3MmzOBY?si=ZXslC2Rbi5QYxHaN"
                   title="Latest Worship Service"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
